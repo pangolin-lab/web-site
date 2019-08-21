@@ -7,17 +7,171 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-  		integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+  	<link rel="stylesheet" type="text/css" href="lib/bs4/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="lib/iconfont/iconfont.css">
+  	<link rel="stylesheet" type="text/css" href="css/main.css">
 
+	<script src="lib/jquery/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="lib/popper/umd/popper.min.js" type="text/javascript"></script>
+	<script sr="lib/bs4/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="lib/iconfont/iconfont.js"></script> 
+
+	<style type="text/css">
+		div1 {
+			border-style: solid;
+			border-color: #699;
+		}
+		.masthead {
+  			position: relative;
+  			width: 100%;
+  			height: auto;
+			min-height: 35rem;
+			padding: 15rem 0;
+			background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(1%, rgba(22, 22, 22, 0.7)), to(#161616)), url("img/header-bg.png");
+			  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 1%, #161616 1%), url("img/header-bg.png");
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-size: cover;
+			background-image: url("img/header-bg.png");
+		}
+
+		.personal-bg {
+  			position: relative;
+  			width: 100%;
+  			height: auto;
+			min-height: 35rem;
+			padding: 15rem 0;
+			background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(1%, rgba(22, 22, 22, 0.7)), to(#161616)),url("img/personal-bg.png");
+			  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 1%, #161616 100%), url("img/personal-bg.png");
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-size: cover;
+			background-image: url("img/personal-bg.png");
+		}
+
+		.middle-bg {
+  			position: relative;
+  			width: 100%;
+  			height: auto;
+			min-height: 35rem;
+			padding: 15rem 0;
+			background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(1%, rgba(22, 22, 22, 0.7)), to(#161616)),url("img/about-middle-bg.png");
+			  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 1%, #161616 100%), url("img/about-middle-bg.png");
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-size: cover;
+			background-image: url("img/about-middle-bg.png");			
+		}
+
+		.body-bg {
+
+  			position: relative;
+  			width: 100%;
+  			height: auto;
+			min-height: 35rem;
+			padding: 15rem 0;
+			background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)),url("img/body-bg.png");
+			  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("img/body-bg.png");
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-attachment: scroll;
+			  background-size: cover;
+			background-image: url("img/body-bg.png");
+		}		
+
+	</style>
 </head>
-<body>
+<body class="page-top body-bg">
+
+	<nav class="navbar navbar-expand navbar-light fixed-top" id="topNav">
+		<div class="container ">
+			<div class=""></div>
+			<a class="navbar-brand " href="page-top">
+		        <svg class="icon svg-icon" aria-hidden="true">
+		          <use xlink:href="#icon-proton"></use>
+		          <span class="logo text-left">Proton Network</span>
+		        </svg>
+			</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button"
+			data-toggle="collapse" data-target="#navbarResponsive" aria-controls="#navbarResponsive"
+			aria-expanded="false" aria-label="Toggle navigation">
+				Menu<i class="fa fa-bars"></i>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a href="#about" class="nav-link js-scroll-trigger">简介</a>
+					</li>
+					<li class="nav-item">
+						<a href="#personal" class="nav-link js-scroll-trigger">个人用户</a>
+					</li>
+					<li class="nav-item">
+						<a href="#agent" class="nav-link js-scroll-trigger">代理</a>
+					</li>
+					<li class="nav-item">
+						<a href="#merchant" class="nav-link js-scroll-trigger">商户</a>
+					</li>
+					<li class="nav-item">
+						<a href="#help" class="nav-link js-scroll-trigger">帮助</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link sel-lang js-scroll-trigger">
+							<span class="chinese pc-cn lang-active">中文</span>
+							<span class="vertical">|</span>
+							<span class="chinese pc-en">En</span>
+						</a>
+					</li>						
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div class="">
+
+	<header class="about" id="about" style="min-height: 350px;">
+		<div class="container d-flex h-100 align-items-center">
+			<div class="row">
+				<div class="col-10">
+					
+				</div>
+			</div>
+		</div>
+	</header>
+</div>
+<section class="about ">
+	<div class="container d-flex d-100" style="min-height: 400px;">
+		hsd
+	</div>
+</section>
+<section class="" id="personal">
+	<div class="" style="min-height: 350px;">
+	</div>	
+</section>
+<section class="agent" id="agent">
+	<div class="" style="min-height: 400px;">
+	</div>	
+</section>
+
 	<div>
 	  <p class="date-container"></p>
 	</div>
 
-<!-- SCRIPTS BEGIN -->
-	
+
+	<!-- FOOTER -->
+	<footer class="bg-faded small text-center">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-xl-4 col-md-6">
+					Copyright &copy; 2019 Proton-lab | All rights reserved. 
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- SCRIPTS BEGIN -->	
 	<script src="js/index-bundle.js" type="text/javascript" ></script>
 	<script>
 		$(function(){

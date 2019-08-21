@@ -6,9 +6,43 @@
  *|_|   |_|  \___/ \__\___/|_| |_| |_|   |_|  \___/ \__\___/ \___\___/|_| |_____\__,_|_.__/ 
  * 
  * main
- * Copyright (c) 2019 Proton-team,lanbery
+ * Copyright (c) 2019 Proton-team,ppn
  * E-mail : developer-team@tuta.io
- * https://github.com/lanbery/web-site
+ * https://github.com/proton-team/web-site
  * 
  *
  */
+
+#topNav {
+	min-height: 35px;
+}
+body {
+	font-family:Source Han Sans CN;
+}
+
+/* a */
+a {
+	font-weight:300;
+	color: rgba(56,55,81,1);
+}
+
+
+footer {
+	padding: 5rem 0;
+}
+
+/* fonticon */
+.svg-icon {
+	width: 1.2em;
+	height: 1.2em;
+	margin-right: 4px; 
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+
+}
+
+.logo {
+	font-family: font-weight:bold;
+	color: #182B71;
+}
