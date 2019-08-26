@@ -1,14 +1,14 @@
 {
-  "name": "ppn",
+  "name": "pangolin-web",
   "version": "1.0.0",
-  "description": "Proton WEB",
-  "main": "src/index.js",
+  "description": "Pangolin WEB",
+  "main": "src/App.js",
   "scripts": {
     "clean:all": "rm -rf build",
     "mkdirs": "mkdir build",
     "browserify:js": "browserify src/App.js -dv -o build/js/index-bundle.js",
     "rebuild": "npm run clean:all && npm run mkdirs && npm run browserify:js",
-    "serve": "lite-server -c .configs/bs-config.json",
+    "serve": "lite-server -c .config/bs-config.json",
     "start": "npm run rebuild && npm run serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,12 +17,12 @@
       "browserify-shim"
     ]
   },
-  "browserify-shim": "./.configs/shim.js",
+  "browserify-shim": "./.config/shim.js",
   "repository": {
     "type": "git",
-    "url": "git@ppn:proton-lab/web-site.git"
+    "url": "git@ppn:pangolin-lab/web-site.git"
   },
-  "author": "Proton-team",
+  "author": "pangolin-lab",
   "license": "MIT",
   "devDependencies": {
     "bestzip": "^2.1.4",

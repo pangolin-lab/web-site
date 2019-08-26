@@ -63,4 +63,6 @@ typings/
 # Project ignore
 build
 dist
-.remote-server.json
+.local-*.*
+build
+tmp

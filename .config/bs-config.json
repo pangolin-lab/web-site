@@ -1,5 +1,5 @@
 {
-	"port": 64389,
+	"port": 8900,
 	"bind": "localhost",
 	"files": ["./public/**/*.{html,htm,css,js}"],
 	"index": "index.html",
