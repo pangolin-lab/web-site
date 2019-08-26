@@ -1,199 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="author" content="Pangolin-team">
+  <meta name="author" content="">
 
-  <title>Pangolin Network</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Grayscale - Start Bootstrap Theme</title>
+
   <!-- Bootstrap core CSS -->
-  <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="libs/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
- <!--  <link rel="stylesheet" href="libs/iconfont/iconfont.css"> -->
-  <link rel="stylesheet" type="text/css" href="css/main.css">
- 
-  <style type="text/css">
-.chinese {
-  cursor: hand;
-}
-.lang-active {
-  color: #182B71;
-  font-weight: 600;
-}
-  </style>
-
+  <link href="css/index-grayscal.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar" >
+<body id="page-top">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
-	<!--     <svg class="icon svg-icon" aria-hidden="true">
-          <use xlink:href="#iconpangolin"></use>
-          <span class="logo text-left">Pangolin Network</span>
-        </svg> -->
-        Pangolin Network
-      </a>
-
-       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
-       data-target="#navbarResponsive" aria-controls="navbarResponsive" 
-       aria-expanded="false" aria-label="Toggle navigation">
-          Menu
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Pangolin Network</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
         <i class="fas fa-bars"></i>
-      </button> 
+      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger active i18n" data-cn="简介" data-en="About" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger i18n" data-en="About" data-cn="简介"
+            href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger i18n d-lg-block d-sm-none d-md-none" href="#personal" data-cn="个人项目" data-en="Personal Project">Personal Project</a>
+            <a class="nav-link js-scroll-trigger i18n" data-en="Personal Project" data-cn="个人项目"
+             href="#personal">Personal Project</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger i18n" data-en="Download Dapp" data-cn="下载客户端" target="Download" 
+             data-cnurl="http://pangolink.org/dl_cn_index.html" data-enurl="http://pangolink.org/dl_index.html"
+             href="http://pangolink.org/dl_index.html">Download Dapp</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger i18n" data-en="Contact" data-cn="联系我们"
+             href="#contact">Contact</a>
+          </li>
+          <li class="nav-item d-none">
+            <a class="nav-link js-scroll-trigger i18n" data-en="Help" data-cn="帮助"
+             href="#">Help</a>
+          </li> 
 
           <li class="nav-item">
-            <a class="nav-dl-a nav-link js-scroll-trigger i18n" data-cn="下载客户端" data-en="Download DAPP" 
-            href="http://pangolink.org/dl_index.html"
-				data-cnurl="http://pangolink.org/dl_cn_index.html" data-enurl="http://pangolink.org/dl_index.html" target="Dapp Download" 
-            >
-        	Download DAPP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger i18n d-lg-block d-sm-none d-md-none" data-cn="联系我们" data-en="Contact" href="#contact">Contact</a>
-          </li>          
-<!--           <li class="nav-item">
-          	<a class="nav-link js-scroll-trigge i18n" data-cn="帮助" data-en="Help" href="#Help">Help</a>
-          </li> -->
-		  <li class="nav-item">
-			<a class="nav-link sel-lang js-scroll-trigger">
-				<span class="chinese pc-cn lang-active small" data-sign="cn" data-en="中文" data-cn="Chinese">中文</span>
-				<span class="vertical">|</span>
-				<span class="chinese pc-en small" data-sign="en" data-en="English" data-cn="英文">English</span>
-			</a>
-		  </li>                    
+            <a class="nav-link sel-lang js-scroll-trigger">
+              <span class="chinese pc-cn lang-active small" data-sign="cn" data-en="中文" data-cn="Chinese">中文</span>
+              <span class="vertical">|</span>
+              <span class="chinese pc-en small" data-sign="en" data-en="English" data-cn="英文">English</span>
+            </a>
+          </li>                    
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Header -->
-  <header class="" style="padding-top: 80px;">
-    <div class="container d-flex h-100 align-items-center">
-      <div class="row align-items-center">
-      	<div class="col-lg-6 col-sm-12">
-      	  <h1 class="i18n header-slogan ml-3" data-en="Traffic usage form" data-cn="流量使用形式">
-      	  	流量使用形式
-      	  </h1>
-      	  <p class="p-slogan ml-4 i18n" data-cn="分布式提供流量服务廉价、公平竞争容错 " 
-			data-en="Distributed provision of traffic services for cheap, fair competition and fault tolerance"
-      	  >
-      	    Distributed provision of traffic services for cheap, fair competition and fault tolerance
-      	  </p>
-      	  <p class="p-slogan ml-4 i18n" data-cn="随时切换矿机" data-en="Switch mining machine at any time"
-      	  >
-      	  	Switch mining machine at any time
-      	  </p>
-      	  <p class="p-slogan ml-4 i18n" data-cn="按报文付费精准公平、合理" data-en="Paying by message is accurate, fair and reasonable"
-      	  >
-      	  	Paying by message is accurate, fair and reasonable
-      	  </p>
-		       	  
-      	</div>
-      	<div class="col-lg-6 col-sm-12 text-center">
-      		<img src="img/01.gif" class="img-responsive img-fluid center-block" style="max-width: 420px;">
-      	</div>
+   <header class="masthead" >
+    <div class="container align-items-center" id="about">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 mx-auto text-left text-sm-center">
+          <h1 class="mx-auto my-0 text-slogan pt-lg-5 pb-lg-3 i18n"
+            data-en="Traffic usage form" data-cn="流量使用形式">
+            Traffic usage form
+          </h1>
+          <h2 class="text-p-light mx-2 pt-3 ml-lg-5 i18n"
+            data-en="Distributed provision of traffic services for cheap, fair competition and fault tolerance." 
+            data-cn="分布式提供流量服务廉价、公平竞争容错"
+            >
+            Distributed provision of traffic services for cheap, fair competition and fault tolerance.
+          </h2>
+          <h2 class="text-p-light mx-2 ml-lg-5 i18n"
+            data-en="Switch mining machine at any time." data-cn="随时切换矿机"
+          >
+            Switch mining machine at any time.
+          </h2>
+          <h2 class="text-p-light mx-2 ml-lg-5 i18n"
+            data-en="Paying by message is accurate, fair and reasonable." data-cn="按报文付费精准公平、合理"
+          >
+            Paying by message is accurate, fair and reasonable.
+          </h2>
+
+        </div>
+
+        <div class="col-lg-6 col-sm-12 mx-auto text-center i18n">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/01.gif">
+        </div>
       </div>
     </div>
-  </header>
-  <section class="about-section" id="about">
-  	<div class="container align-items-center" style="">
-	  <div class="row">
-	  	<div class="col-lg-6 col-sm-12 text-center">
-	  
-	  	    <img class="img-responsive img-fluid center-block" src="img/proton_01.png">
-  	  	    <h5 class="i18n pt-4" data-en="YouTube" data-cn="油管">YouTube</h5>	
-  	  		  	  	  
-	  	</div>
-	  	<div class="col-lg-6 col-sm-12 text-center" style="padding-top: 5rem;">
-		  <img src="img/proton_02.png" class="img-responsive img-fluid center-block img-program" >
-		  <h5 class="i18n pt-4" data-en="Access Space X's starlink and sell traffic" data-cn="接入Space X 的starlink并售卖流量">
-			Access Space X's starlink and sell traffic
-		  </h5>	  		
-	  	</div>
-	  	<div class="col-lg-6 col-sm-12 text-center" style="padding-top: -5rem;">
-		  <img src="img/proton_03.png" class="img-responsive img-fluid center-block img-program" >
-		  <h5 class="i18n pt-4" data-en="Selling remaining bandwidth IDC idle or home traffic" data-cn="出售剩余带宽IDC闲置/家庭流量">
-			Selling remaining bandwidth IDC idle or home traffic
-		  </h5>	  		
-	  	</div>
-	  	<div class="col-lg-6 col-sm-12 text-center" style="padding-top: 10rem;">
-		  <img src="img/proton_04.png" class="img-responsive img-fluid center-block img-program" >
-		  <h5 class="i18n pt-4" data-en="Wholesale and retail of islands without network traffic in less developed regions of Africa" data-cn="非洲欠发达地区海岛无网络区流量批发零售">
-			Wholesale and retail of islands without network traffic in less developed regions of Africa
-		  </h5>	  	
-	  	</div>	  	
-	  </div>
-  	</div>
+  </header> 
+
+  <!-- About Section 
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
+          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+        </div>
+      </div>
+      <img src="img/ipad.png" class="img-fluid" alt="">
+    </div>
+  </section>
+  -->
+
+  <!-- Personal Section -->
+  <section id="personal" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Featured Project Row -->
+
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0 text-center">
+        <div class="col-lg-6 col-sm-12 ">
+          <img class="img-fluid" src="img/proton_01.png" alt="">
+          <h4 class="pt-4 i18n"
+            data-en="YouTube" data-cn="油管"
+          >
+            YouTube
+          </h4>
+        </div>
+
+        <div class="col-lg-6 col-sm-12 ">
+          <img class="img-fluid" src="img/proton_02.png" alt="">
+          <h4 class="pt-4 i18n"
+            data-en="Access Space X's starlink and sell traffic" data-cn="接入Space X 的starlink并售卖流量"
+          >
+            接入Space X 的starlink并售卖流量
+          </h4>
+        </div>                        
+
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6 col-sm-12 ">
+          <img class="img-fluid" src="img/proton_03.png" alt="">
+          <h4 class="pt-4 i18n"
+            data-en="Selling remaining bandwidth IDC idle or home traffic" data-cn="出售剩余带宽IDC闲置/家庭流量"
+          >
+            Selling remaining bandwidth IDC idle or home traffic
+          </h4>
+        </div>
+        <div class="col-lg-6 col-sm-12 ">
+          <img class="img-fluid" src="img/proton_04.png" alt="">
+          <h4 class="pt-4 i18n"
+            data-en="Wholesale and retail of islands without network traffic in less developed regions of Africa" data-cn="接入Space X 的starlink并售卖流量"
+          >
+            Wholesale and retail of islands without network traffic in less developed regions of Africa
+          </h4>
+        </div> 
+      </div>
+
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-12 col-lg-12 col-sm-12 text-center">
+          <img class="img-fluid mb-3 mb-lg-0 i18n" src="img/cn/personal.png" alt="">
+          <a class="btn btn-primary btn-sm i18n" data-en="Get Started" data-cn="开始使用" target="Download" 
+             data-cnurl="http://pangolink.org/dl_cn_index.html" data-enurl="http://pangolink.org/dl_index.html"
+          >
+            Get Started
+          </a>
+        </div>
+
+      </div>       
+    </div>
   </section>
 
-  <!-- Personal User -->
-  <section class="personal-section" id="personal">
-  	<div class="container">
-  	  <h2 class="personal-title i18n" data-en="Personal User" data-cn="个人用户">
-  	    Personal User
-  	  </h2>
-  	  <div class="row justify-content-center align-items-center">
-  	  	<div class="col-lg-6 col-sm-12">
-  	  	  <div class="text-center">
-  	  	  	<img src="img/en/personal_01.png" class="img-responsive img-fluid center-block img-personal" style="max-width: 366px;">
-  	  	  </div>
-  	  	  <div class="text-center">
-  	  	  	<img src="img/en/personal_02.png" class="img-responsive img-fluid center-block img-personal" style="max-width: 366px;">
-  	  	  </div>
-  	  	</div>
-  	  	<div class="col-lg-6 col-sm-12">
-  	  	  <div class="text-left">
-  	  	  	<div class="container">
-			  <img src="img/personal_03.png" class="img-responsive img-fluid center-block img-personal" style="max-width: 366px;">
-			  <div class="text-center">
-			  	<a class="btn btn-primary i18n" href="http://pangolink.org/dl_index.html"
-			  	data-cnurl="http://pangolink.org/dl_cn_index.html" data-enurl="http://pangolink.org/dl_index.html" target="Dapp Download"
-			  	 data-en="Get Start" data-cn="开始使用" >
-			  	  Get Start
-			  	</a>
-			  </div>
-  	  	  	</div>
-  	  	  </div>
-  	  	</div>
-  	  </div>
-  	</div>
-  </section>
+  <!-- Signup Section -->
+<!--   <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
 
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
 
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+          </form>
 
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <!-- Contact Section -->
-  <section class="contact-section badge-secondary" id="contact">
+  <section class="contact-section bg-black footer-bg" id="contact">
     <div class="container">
+
+<!--       <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">hello@yourdomain.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">+1 (555) 902-8832</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
       <div class="social d-flex justify-content-center">
-        <a href="https://twitter.com/pangoli06275561" class="mx-2"  target="twitter">
+        <a href="https://twitter.com/pangoli06275561" class="mx-2" target="twitter">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="https://www.facebook.com/Pangolin-110039653699290" class="mx-2"  target="facebook">
+        <a href="https://www.facebook.com/Pangolin-110039653699290" class="mx-2" target="facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
         <a href="https://t.me/joinchat/JQL5exM5SxWLtI3ZmtVnVA" class="mx-2" target="telegram">
-          <i class="fab fa-telegram-plane"></i>
+          <i class="fab fa-telegram "></i>
         </a>
       </div>
 
@@ -201,28 +259,26 @@
   </section>
 
   <!-- Footer -->
-  <footer class="small text-center">
+  <footer class="bg-black small text-center footer-bg">
     <div class="container">
-      Copyright &copy; 2019 Pangolin | All rights reserved. 
+      Copyright &copy; Pangolin 2019
     </div>
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-<!--   <script src="libs/jquery/jquery.js"></script> -->
-<script src="js/jquery.min.js"></script>
-  <script src="libs/popper/umd/popper.min.js" type="text/javascript"></script>
-  <script sr="libs/bootstrap/js/bootstrap.bundle.js" type="text/javascript"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   <!-- Plugin JavaScript -->
-  <script src="libs/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <<script type="text/javascript" src="js/i18n.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
 
-<!--   <script type="text/javascript" src="js/grayscale.js"></script> -->
-  <!-- <script type="text/javascript" src="libs/iconfont/iconfont.js"></script> -->  
-  <!-- Custom JS -->
-  <script type="text/javascript" src="js/i18n.js"></script>
-  <!-- <script type="text/javascript" src="js/dev.js"></script> -->
-
-  <script type="text/javascript">
-  	
+  <script>
+   $(document).ready(function(){
+      InitializeI18n();
+   });  
   </script>
 
 </body>

@@ -2,7 +2,7 @@
 	"port": 8900,
 	"bind": "localhost",
 	"files": ["./public/**/*.{html,htm,css,js}"],
-	"index": "index-home.html",
+	"index": "index.html",
 	"server": [
 		"./build",
 		"./public",
