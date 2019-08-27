@@ -41,6 +41,11 @@ function setLang(lg){
 		if(url){
 			$(el).attr('href',url);
 		}
+
+		let imgSrc = $(el).data(lg+'src');
+		if(imgSrc){
+			$(el).attr('src',imgSrc);
+		}
 	});
 
 }
