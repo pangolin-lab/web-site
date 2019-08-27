@@ -1,0 +1,196 @@
+$white : #ffffff;
+
+$sd_grey : #4a4a4a;
+$sd_grey-light: #f7f7f7;
+
+// <MEDIA RESPONSIVE>
+$extra_small: 425px; // Small devices (landscape phones, 576px and up)
+$small: 576px; // Small devices (landscape phones, 576px and up)
+$medium: 768px; // Medium devices (tablets, 768px and up)
+$large: 992px; // Large devices (desktops, 992px and up)
+$extra_large: 1200px; // Extra large devices (large desktops, 1200px and up)
+// </MEDIA RESPONSIVE>
+
+@mixin box-arrow($arrowDirection, $arrowColor, $arrowSize: 10px) {
+    position: relative;
+    z-index: 10;
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        display: block;
+        position: absolute;
+        z-index: 10;
+        border: 0;
+
+        @if $arrowDirection=="bottom"or $arrowDirection=="top" {
+            border-left: $arrowSize solid transparent;
+            border-right: $arrowSize solid transparent;
+            margin-left: -$arrowSize;
+            left: 50%;
+
+            @if $arrowDirection=="bottom" {
+                border-top: $arrowSize solid $arrowColor;
+                bottom: -$arrowSize;
+            }
+
+            @if $arrowDirection=="top" {
+                border-bottom: $arrowSize solid $arrowColor;
+                top: -$arrowSize;
+            }
+        }
+
+        @if $arrowDirection=="left"or $arrowDirection=="right" {
+            border-top: $arrowSize solid transparent;
+            border-bottom: $arrowSize solid transparent;
+            margin-top: -$arrowSize;
+            top: 50%;
+
+            @if $arrowDirection=="left" {
+                border-right: $arrowSize solid $arrowColor;
+                left: -$arrowSize;
+            }
+
+            @if $arrowDirection=="right" {
+                border-left: $arrowSize solid $arrowColor;
+                left: auto;
+                right: -$arrowSize;
+            }
+        }
+    }
+}
+
+.grey_light-block{
+  background-color: $sd_grey-light;
+}
+
+.timeline{
+    position: relative;
+    background-image: linear-gradient(to bottom, #930054, #983279, #97519b, #926db8, #8b87d0, #7096df, #4ca4e9, #00b1ec, #00b6db, #00b7b2, #00b376, #2aab29);
+   
+    width: 50px;
+    text-align: center;
+
+    @media screen and (max-width: $medium) {
+        margin: 0 0 0 20px;
+    }
+   
+    @media screen and (min-width: $medium + 1) {
+        margin: 0 auto;
+    }
+
+    & .point{
+        & .year{
+            padding-top: 10px;
+            color: $white;
+        }
+
+        .bocata{
+            position: relative;
+            background-color: $white;
+            padding: 20px;
+
+            @media screen and (max-width: $extra_small) {
+                width: 180px;
+
+                &.little{
+                    width: 180px;
+                }
+            }
+           
+            @media screen and (min-width: $extra_small) and (max-width: $small) {
+                width: 250px;
+
+                &.little{
+                    width: 250px;
+                }
+            }
+           
+            @media screen and (min-width: $small + 1) {
+                width: 400px;
+
+                &.little{
+                    width: 250px;
+                }
+            }
+
+            transition: all .3s;
+        }
+        
+        .bocata + .bocata{
+            margin-top: 35px;
+        }
+
+        &:nth-child(odd) .bocata{
+            box-shadow: -6px 10px 20px -20px $sd_grey;
+
+            left: 100px;
+
+            @include box-arrow("left", $white);
+        } 
+
+        &:nth-child(even) .bocata{
+            box-shadow: 6px 10px 20px -20px $sd_grey;
+
+            @media screen and (max-width: $medium) {
+                left: 100px;
+
+                @include box-arrow("left", $white);
+            }
+
+            @media screen and (min-width: $medium + 1) {
+                right: 425px;
+
+                &.little{
+                    @media screen and (min-width: $medium+1) {
+                        right: 275px;
+                    }
+                }
+
+                @include box-arrow("right", $white);
+            }
+        } 
+    
+        & .arrow{
+            border: solid $sd_grey-light;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 20px;
+    
+             transform: rotate(45deg);
+        }
+
+        &:first-child .arrow,
+        &:last-child .arrow{
+            border: solid $sd_grey-light;
+            border-width: 0 12px 12px 0;
+            display: inline-block;
+            padding: 20px;
+    
+             transform: rotate(45deg);
+        }
+
+        .arrow-clean{
+            border: solid $sd_grey-light;
+            border-width: 0 20px 20px 0;
+            display: inline-block;
+            padding: 20px;
+
+            position: absolute;
+            left: -5px;
+            bottom: -13px;
+
+            transform: rotate(45deg);
+        }
+    }
+
+    transition: all .3s;
+   
+}
+
+.title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1.28px;
+}
