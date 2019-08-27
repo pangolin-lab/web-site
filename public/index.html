@@ -20,6 +20,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/index-grayscal.css" rel="stylesheet">
+  <link href="vendor/timeline/tline.css" rel="stylesheet">
 
 </head>
 
@@ -369,24 +370,59 @@
           </div>
         </div>
         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12">
-          <div class="container-fluid">
-            <div class="row justify-content-center">
-              <div class="col-4 card-block bg-white px-2 time-line">
-                <p>发布《Pangolin》代币<span class="small">(简称:LIN)</span></p>
-                <p class="small">
-                  首期智能合约兑换 代币LIN总发行量4.2亿枚   
-                </p>
-                <p class="small">首期智能合约兑换额度2100万枚</p>
-                <p class="small">占总量5%，1ETH=300LIN </p>
-              </div>
-            </div>          
-            <div class="row">
-              <img src="img/timeline.svg" class="img-fluid" width="2000px;">
-            </div>
-            <div class="row">
-            </div>            
-          </div>
-          
+          <section class="cd-h-timeline js-cd-h-timeline margin-bottom-md">
+            <div class="cd-h-timeline__container container">
+              <div class="cd-h-timeline__dates">
+                <div class="cd-h-timeline__line">
+                  <ol>
+                    <li>
+                      <a href="#0" data-date="24/08/2019" class="cd-h-timeline__date cd-h-timeline__date--select">
+                        8月24日
+                      </a>
+                    </li>
+                      <a href="#0" data-date="24/08/2019" class="cd-h-timeline__date cd-h-timeline__date--select">
+                        8月24日
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0" data-date="05/09/2019" class="cd-h-timeline__date cd-h-timeline__date--select">
+                        9月5日
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#0" data-date="09/10/2019" class="cd-h-timeline__date cd-h-timeline__date--select">
+                        10月
+                      </a>
+                    </li>                                                            
+                  </ol>
+                  <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>                  
+                </div><!--  .cd-h-timeline__line  -->
+              </div><!-- .cd-timeline_dates -->
+
+              <ul>
+                <li>
+                    <a href="#0" class="text-replace cd-h-timeline_navigation cd-h-timeline__navogation--prev cd-h-timeline__navigation--inactive">Prev</a>
+                </li>
+                <li>
+                    <a href="#0" class="text-replace cd-h-timeline_navigation cd-h-timeline__navogation--next">Next</a>
+                </li>
+              </ul>
+            </div><!-- .cd-h-timeline__container -->
+
+            <div class="cd-h-timeline__events">
+              <ol>
+                <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title"></h2>
+                    <em class="cd-h-timeline__event-date"></em>
+                    <p class="cd-h-timeline__event-description color-contrast-medium">
+                      hakdsfasdkfkadsfjasdjfkasdfja
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </div>    
+          </section>          
         </div>        
       </div>
     </div>
@@ -484,6 +520,8 @@
   <script type="text/javascript" src="js/i18n.js"></script>
   <!-- Custom scripts for this template -->
   <script src="js/grayscale.min.js"></script>
+  <script src="vendor/timeline/util.js"></script>
+  <script src="vendor/timeline/main.js"></script>
 
   <script>
    $(document).ready(function(){
