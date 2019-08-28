@@ -1021,7 +1021,7 @@ img,video,svg {
 body {
 	font-size: 1em;
 	font-size: var(--text-base-size, 1em);
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-family: var(--font-primary, sans-serif);
 	color: hsl(240, 4%, 20%);
 	color: var(--color-contrast-high, #313135)
@@ -1072,7 +1072,7 @@ small,.text-sm {
 a,.link {
 	color: hsl(220, 90%, 56%);
 	color: var(--color-primary, #2a6df4);
-	text-decoration: underline
+	text-decoration: none
 }
 
 strong,.text-bold {
@@ -1088,6 +1088,7 @@ u,.text-underline {
 }
 
 .text-component {
+	min-height: 160px;
 	--component-body-line-height: calc(var(--body-line-height)*var(--line-height-multiplier, 1));
 	--component-heading-line-height: calc(var(--heading-line-height)*var(--line-height-multiplier, 1))
 }
@@ -3525,7 +3526,7 @@ mark {
 	--cd-color-3-h: 0;
 	--cd-color-3-s: 0%;
 	--cd-color-3-l: 97%;
-	--font-primary: 'Fira Sans', sans-serif;
+	--font-primary: 'Nunito', sans-serif;
 	--font-secondary: 'Playfair Display', serif
 }
 
@@ -3791,11 +3792,21 @@ body {
 .js .cd-h-timeline__event-title {
 	color: hsl(0, 0%, 22%);
 	color: var(--cd-color-1);
-	font-family: 'Playfair Display', serif;
+	font-family: 'Nunito', serif;
 	font-family: var(--font-secondary);
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 2.48832em;
-	font-size: var(--text-xxxl)
+	font-size: var(--text-xl)
+}
+
+.js .cd-h-timeline__event-description {
+	color: hsl(0, 0%, 22%);
+	color: var(--cd-color-1);
+	font-family: 'Nunito', serif;
+	font-family: var(--font-secondary);
+	font-weight: 400;
+	font-size: 2.48832em;
+	font-size: var(--text-sm)
 }
 
 .js .cd-h-timeline__event-date {
