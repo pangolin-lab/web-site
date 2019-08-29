@@ -20,7 +20,7 @@
     $('.navbar-collapse').collapse('hide');
   });
 
-//submenus click
+  //submenus click
   $('.sub-menu-container a.js-scroll-trigger').on('click',(e)=>{
     $('.dropdown.show .dropdown-toggle').dropdown('toggle');
   });
