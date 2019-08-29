@@ -323,6 +323,19 @@
   text-decoration: none;
 }
 
+/*border: #64a19d solid 0.1px;*/
+.contact-section li a:hover {
+  color: rgb(100,161,157,1);
+}
+
+.contact-section li a:focus {
+  color: rgb(100,161,157,1);
+}
+
+.contact-section li a:active {
+  color: #fade(#64a19d, 80%) !important;
+}
+
 .contact-section .logo-footer {
     width:3.75rem;
     height:3.75rem;
