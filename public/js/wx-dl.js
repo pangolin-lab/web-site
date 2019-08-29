@@ -61,6 +61,10 @@ function Initialize(){
 
 }
 
+function _getAttFileUrl(type){
+	return DLCnst.gitRelease + DLCnst.gitVersion+"/"+DLCnst.apkGithub;
+}
+
 function fillBtn(url){
 	$("a.apk-btn").attr('href',url);
 	$("p.p-dlurl").text(url);
