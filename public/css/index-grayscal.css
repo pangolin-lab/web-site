@@ -85,6 +85,48 @@
     border-bottom: 0.25rem solid #182B71;
   }
 }
+/* override bs4 nav */
+/*.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding-y 0;
+  margin: $dropdown-spacer 0 0; // override default ul
+  @include font-size($dropdown-font-size);
+  color: $dropdown-color;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  list-style: none;
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border: none!;
+  @include border-radius($dropdown-border-radius);
+  @include box-shadow($dropdown-box-shadow);
+}*/
+
+.sub-menu-container {
+  border: none !important;
+  top:65%;
+  padding: -1rem 0;
+}
+
+.sub-menu-container a:hover{
+  color: rgba(116,117,123,0.85);
+  background: transparent;
+}
+.sub-menu-container a:active{
+  color: rgba(116,117,123,0.85);
+  background: transparent;
+}
+
+.sub-menu-container a.active{
+  color: rgb(71,72,74,.85);
+  background: transparent;
+}
+
 
 .masthead {
   position: relative;
@@ -127,6 +169,11 @@
     line-height: 1.5rem;
     letter-spacing: 0.4rem;
   }
+
+  .sub-menu-container .dropdown-item {
+    padding: .15rem .75rem;
+    font-weight: 200;
+  }  
 }
 
 @media (min-width: 768px) {
@@ -161,6 +208,7 @@
     max-width: 30rem;
     font-size: 1.25rem;
   }
+
 }
 
 .btn {

@@ -208,14 +208,33 @@
             <a class="nav-link js-scroll-trigger i18n" data-en="About" data-cn="简介"
             href="#about">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger i18n" data-en="Personal User" data-cn="个人用户"
-             href="#personal">Personal User</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle i18n" href="#" id="menu-users" role="button" data-toggle="dropdown" 
+            data-en="User" data-cn="用户"
+            aria-haspopup="true" aria-expanded="false" >
+             <span class="" >User</span>
+            
+            </a>
+               <ul class="dropdown-menu  sub-menu-container" aria-labelledby="menu-users">
+                 <li class="dropdown-item">
+                    <a href="#personal" class="dropdown-item js-scroll-trigger i18n"
+                    data-en="Personal" data-cn="个人"
+                    >
+                      Personal
+                    </a>
+                 </li>
+                 <li class="dropdown-item">
+                   <a href="#sdk-section" class="dropdown-item js-scroll-trigger i18n"
+                    data-en="SDK User" data-cn="SDK 用户"
+                   >SDK</a>
+                 </li>
+               </ul>
+         
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger i18n" data-en="SDK User" data-cn="SDK用户"  
-             href="#sdk-section">SDK User</a>
-          </li>          
+   <!--        <li class="nav-item">
+              <a class="nav-link js-scroll-trigger i18n" data-en="SDK User" data-cn="SDK用户"  
+               href="">SDK User</a>
+            </li>  -->         
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger i18n" data-en="Project Progress" data-cn="项目进展"
              href="#pp-section">Project Progress</a>
@@ -697,18 +716,21 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script type="text/javascript" src="js/i18n.js"></script>
   <!-- Custom scripts for this template -->
-  <script src="js/grayscale.min.js"></script>
+  <script src="js/grayscale.js"></script>
   <script src="vendor/timeline/util.js"></script>
   <script src="vendor/timeline/swipe-content.js"></script>
   <script src="vendor/timeline/main.js"></script>
-  <script src="vendor/iconfont/iconfont.js"></script>
+ 
 
   <script>
    $(document).ready(function(){
       InitializeI18n();
+
+
+
    });  
   </script>
-
+<script src="vendor/iconfont/iconfont.js"></script>
 </body>
-
+ 
 </html>

@@ -1,6 +1,6 @@
 (function($) {
   "use strict"; // Start of use strict
-
+  console.log(">>>>");
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -20,11 +20,16 @@
     $('.navbar-collapse').collapse('hide');
   });
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  // $('body').scrollspy({
-  //   target: '#mainNav',
-  //   offset: 100
-  // });
+//submenus click
+  $('.sub-menu-container a.js-scroll-trigger').on('click',(e)=>{
+    $('.dropdown.show .dropdown-toggle').dropdown('toggle');
+  });
+
+  //Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 100
+  });
 
   // Collapse Navbar
   var navbarCollapse = function() {
