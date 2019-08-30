@@ -27,7 +27,10 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        Pangolin Network
+<!--         <svg class="d-none icon logo-icon d-sm-inline-block" aria-hidden="true">
+  <use xlink:href="#icon-pangolin"></use>
+</svg> -->
+        <span class="d-none d-lg-block"> Pangolin Network</span>       
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" 
       data-toggle="collapse" data-target="#navbarResponsive" 
@@ -52,6 +55,13 @@
           <li class="nav-item">
             <a href="#videoSection" class="nav-link js-scroll-trigger">Help&Download</a>  
           </li>
+          <li class="nav-item">
+            <a class="nav-link sel-lang js-scroll-trigger">
+              <span class="chinese small" data-sign="cn" data-en="中文" data-cn="Chinese">中文</span>
+              <span class="vertical">|</span>
+              <span class="chinese lang-active small" data-sign="en" data-en="English" data-cn="英文">English</span>
+            </a>
+          </li>          
         </ul>
       </div>          
     </div>
@@ -61,8 +71,8 @@
   <header class="masthead d-flex h-100" style="">
   	<div class="container h-100 align-items-center">
   	  <div class="row pt-lg-5 pt-sm-10" >
-  	  	<div class="col-lg-6 col-md-6 col-sm-8">
-  	  	  <h1 class="i18n">
+  	  	<div class="col-lg-6 col-md-6 col-sm-8 text-slogan">
+  	  	  <h1 id="mastTitle" class="i18n" data-en="Download Free" data-cn="免费下载">
   	  	  	Download Free
   	  	  </h1>	
   	  	</div>
@@ -76,9 +86,16 @@
                 <img src="img/dl/qrcode-fir.png" alt="" class="img-thumbnail">
               </div>
   	  	  	  <div class="text-center" style="padding: 0.55rem 0;">
-  	  	  	  	<button class="btn btn-dark btn-sm " style="width: 150px;">fir.im下载</button>
-  	  	  	  	<p class="card-text small">
-  	  	  	  	  中国用户下载地址
+  	  	  	  	<a class="btn btn-dark btn-sm " style="width: 150px;"
+                href="https://fir.im/safb?utm_source=fir&utm_medium=qr&openId=oGB0Cj7HjPRWpa4pBgutLrtK-shA"
+                target="fir_im"
+                >
+                  fir.im Download
+                </a>
+  	  	  	  	<p class="card-text small i18n"
+                  data-en="Mainland user download address" data-cn="中国用户下载地址"
+                >
+  	  	  	  	  Mainland user download address
   	  	  	  	</p>
   	  	  	  </div>
   	  	  	</div>
@@ -88,23 +105,34 @@
               </div>
   	  	  	  
   	  	  	  <div class=" text-center" style="padding: 0.55rem 0;">
-  	  	  	  	<button class="btn btn-dark btn-sm btn-download" style="width: 150px;">Google Play</button>
-  	  	  	  	<p class="card-text small">
+  	  	  	  	<a class="btn btn-dark btn-sm btn-download" style="width: 150px;"
+                target="google_play" 
+                href="https://play.google.com/store/apps/details?id=com.pongolin.proton" 
+                >
+                  Google Play
+                </a>
+  	  	  	  	<p class="card-text small i18n"
+                  data-en="Overseas user download address" data-cn="海外用户下载地址"
+                >
   	  	  	  	  海外用户下载地址
   	  	  	  	</p>
   	  	  	  </div>	  	  		
   	  	  	</div>
-  	  	  	<div class="col-lg-3 col-sm-8 " style="background: transparent;border: 0;">
+  	  	  	<div class="col-lg-3 col-sm-8 GithubDownload" style="background: transparent;border: 0;">
               <div class="container px-1">
                 <img src="img/dl/qrcode-github.png" alt="" class="img-thumbnail">  
               </div>	
               <!-- <i class="fas fa-bars"></i> -->
   	  	  	  <div class="text-center" style="padding: 0.55rem 0;">
-  	  	  	  	<button class="btn btn-dark btn-sm" style="width: 150px;">
-                  Github
-                </button>
-  	  	  	  	<p class="card-text small">
-  	  	  	  	 Github 下载
+  	  	  	  	<a class="btn btn-dark btn-sm" style="width: 150px;"
+                  href="https://github.com/BIGPango/pangolink/releases/download/v1.2/pangolin-release.apk" target="Github"
+                >
+                  Github Download
+                </a>
+  	  	  	  	<p class="card-text small i18n"
+                  data-en="Github download address" data-cn="Github 下载地址"
+                >
+  	  	  	  	 Github 下载地址
   	  	  	  	</p>
   	  	  	  </div>	  	  		
   	  	  	</div>   	  			
@@ -120,7 +148,11 @@
   	<div class="container">
   	  <div class="row">
   	  	<div class="col-lg-8 mx-auto">
-  	  	  <h2 class="post-title">下载公告</h2>	
+  	  	  <h2 class="post-title i18n"
+          data-cn="下载公告" data-en="Download announcement"
+          >
+            Download announcement
+          </h2>	
   	  	</div>
   	  </div>
   	  <div class="row">
@@ -129,12 +161,19 @@
   	  	</div>
   	  	<div class="col-lg-7 align-content-center">
   	  	  <div class="container mx-auto text-left" style="padding: 3rem 0;">
-  	  	    <p class="i18n">
-  	  	  	《Pangolin》项目是基于Pangolin流量加密协议中的一款区块链DAPP应用产品。
+  	  	    <p class="i18n"
+              data-cn="《Pangolin》项目是基于Pangolin流量加密协议中的一款区块链DAPP应用产品。" 
+              data-en="The Pangolin project is a blockchain DAPP based on Pangolin Traffic Encryption Protocol."
+            >
+  	  	  	  The Pangolin project is a blockchain DAPP based on Pangolin Traffic Encryption Protocol.
   	  	    </p>
   	  	    <p class="i18n">
-  	  	      <span class="i18n">详细内容请点击一下链接:</span>
-  	  	      <a href="#" class="i18n" data-en="" data-cn="">
+  	  	      <span class="i18n"
+                data-en="Please click on the link for details." data-cn="详细内容请点击一下链接:"
+              >Please click on the link for details.</span>
+  	  	      <a href="http://pangolink.org/en_papper.html" class="i18n" target="gonggao"
+              data-enurl="en_papper.html" data-cnurl="cn_papper.html"
+              data-en="http://pangolink.org/en_papper.html" data-cn="http://pangolink.org/cn_papper.html">
   	  	  	    http://pangolink.org/en_papper.html	  	  	
   	  	      </a>  	  	  	
   	  	    </p>
@@ -146,28 +185,78 @@
 
   <!-- video tutorial section -->
   <section class="tutorial-section" id="videoSection">
+
   	<div class="container align-items-center text-center">
+      <h2 class="section-title i18n"
+          data-en="Video tutorial" data-cn="视频教程"
+          >
+            Video tutorial
+          </h2>
       <div class="row">
         <div class="col-12">
-          <h2 class="section-title">视屏教程</h2>
+          
+        </div>        
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+          </div>
+          <div class="row text-center pt-2">
+            <h4 class="video-subtitle i18n" data-cn="英文版视频教程" data-en="English video tutorial"
+            >
+              English video tutorial
+            </h4>
+          </div>          
         </div>
+        <div class="col-lg-6">
+          <div class="row embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+          </div>
+          <div class="row text-center pt-2">
+            <h4 class="video-subtitle i18n"
+             data-en="Chinese video tutorial" data-cn="中文视频教程"
+            >
+              Chinese video tutorial
+            </h4>
+          </div>
+        </div>
+
+       <!-- 
       </div>
   	  <div class="row mx-3">
   	  	<div class="col-md-6 col-sm-12">
           <div class="video-box" style="">
             <img src="img/dl/vedio.png" alt="" class="img">
-            <h4 class="video-subtitle">英文版视频教程</h4>
+            <h4 class="video-subtitle i18n"
+              data-cn=" 英文版视频教程" data-en="English video tutorial"
+              date-vedio="" 
+            >
+             English video tutorial
+            </h4>
           </div>
   	  	  
   	  	</div>
-  	  	<div class="card col-md-6 col-sm-12" style="background: transparent;border: 0;">
-          <div class="video-box">
-            <div class="content">
-              <img src="img/dl/vedio.png" alt="" class="img-fluid ">
+  	  	<div class="col-md-6 col-sm-12" style="background: transparent;border: 0;">
+          <div class="container video-box">
+            <div class="row text-center">
+              <div class="content">
+                <img src="img/dl/vedio.png" alt="" class="card-img-top">
+              </div>
+              <div class="text-center">
+                <h4 class="video-subtitle i18n"
+                  data-cn="中文版视频教程" data-en="Chinese video tutorial" 
+                  date-vedio="" 
+                >
+                  Chinese video tutorial
+                </h4>              
+              </div>              
             </div>
-            <h4 class="video-subtitle">中文版视频教程</h4>
           </div>
-  	  	</div>
+  	  	</div> -->
+
+
   	  </div>	
   	</div>
   </section>
@@ -177,7 +266,11 @@
   	<div class="container text-center">
       <div class="row" style="margin: 10px;padding: 10px;">
         <div class="col-12">
-          <h2 class="section-title">视屏教程</h2>
+          <h2 class="section-title i18n"
+            data-en="Operating procedures" data-cn="操作流程"
+          >
+            Operating procedures
+          </h2>
         </div>
       </div>
   	  <div class="row align-middle">
@@ -187,9 +280,16 @@
               <h5 class="text-white">01</h5>
             </div>  
             <div class="text-center">
-              <h4 class="flow-title">创建账号密码</h4>
-              <p class="small">
-              创建过程自己设置密码 后期连接网络需要输入密码
+              <h4 class="flow-title i18n"
+                data-en="Create an account & password" data-cn="创建账号密码"
+               >
+                Create an account & password
+              </h4>
+              <p class="small i18n"
+                data-en="The creation process sets the password by itself. You need to enter the password to connect to the network later." 
+                data-cn="创建过程自己设置密码 后期连接网络需要输入密码"
+              >
+              The creation process sets the password by itself. You need to enter the password to connect to the network later.
               </p>
             </div>
             <img src="img/dl/new1.png" alt="" class="card-img-bottom img-fluid">          
@@ -202,7 +302,11 @@
               <h5 class="text-white">02</h5>
             </div>          
             <div class="text-center">
-              <h4 class="flow-title">复制pangolin网络地址</h4>
+              <h4 class="flow-title i18n"
+                data-en="Copy pangolin network address" data-cn="复制pangolin网络地址"
+              >
+                Copy pangolin network address
+              </h4>
               <p class="small"></p>
             </div>
             <img src="img/dl/new2.png" alt="" class="card-img-bottom img-fluid">              
@@ -215,8 +319,10 @@
               <h5 class="text-white">03</h5>
             </div>             
             <div class="text-center">
-              <h4 class="flow-title">
-                点击“以太坊高级操作”
+              <h4 class="flow-title i18n"
+                data-en='Click on "Ethereum Advanced Operations"' data-cn="点击“以太坊高级操作”"
+              >
+                Click on "Ethereum Advanced Operations"
               </h4>
               <p class="small"></p>
             </div>
@@ -230,13 +336,29 @@
               <h5 class="text-white">04</h5>
             </div>
             <div class="text-center">
-              <h4 class="flow-title">
-                点击“从imtoken导入”
+              <h4 class="flow-title i18n"
+                data-en='Click on "Import from imtoken"' data-cn="点击“从imtoken导入”"
+              >
+                Click on "Import from imtoken"
               </h4>
-              <p class="small">
-                 扫描imtoken以太坊二维码
+              <p class="small i18n"
+                data-en='Scan imtoken Ethereum QR code' data-cn="扫描imtoken以太坊二维码"
+              >
+                 Scan imtoken Ethereum QR code
               </p>
-              <p class="qrcode-wallet">获取测试版二维码</p>
+              <div class="container qrcode-wallet-container">
+                <p class="qrcode-wallet i18n "
+                  data-en="Get the beta version of the QR code" data-cn="获取测试版二维码"
+                >
+                  Get the beta version of the QR code
+                </p>
+                <div class="qrcode-wallet-img d-none">
+                  <div class="container">
+                    <img src="img/dl/qrcode-wallet.png" alt="" class="img-thumbnail">
+                  </div>
+                </div>
+              </div>
+
             </div>
             <img src="img/dl/new4.png" alt="" class="card-img-bottom img-fluid">             
           </div>
@@ -248,11 +370,15 @@
               <h5 class="text-white">05</h5>
             </div>
             <div class="text-center">
-              <h4 class="flow-title">
-                  粘贴pangolin网络地址点击“绑定”
+              <h4 class="flow-title i18n"
+                data-en='Paste the pangolin network address and click "Bind"' data-cn="粘贴pangolin网络地址点击“绑定”"
+              >
+                Paste the pangolin network address and click "Bind"
               </h4>
-              <p class="small">
-                输入自己测试钱包密码123
+              <p class="small i18n"
+                data-en="Enter your own test wallet password 123" data-cn="输入自己测试钱包密码123"
+              >
+                Enter your own test wallet password 123
               </p>
             </div>
             <img src="img/dl/new5.png" alt="" class="card-img-bottom img-fluid">             
@@ -265,8 +391,11 @@
               <h5 class="text-white">06</h5>
             </div>
             <div class="text-center">
-              <h4 class="flow-title">
-                返回首页，点击“刷新”再开启连接,输入创建账号密码即可
+              <h4 class="flow-title i18n"
+                data-en='Go back to the homepage, click "Refresh" and then open the connection, enter the password to create an account.' 
+                data-cn="返回首页，点击“刷新”再开启连接,输入创建账号密码即可"
+              >
+                Go back to the homepage, click "Refresh" and then open the connection, enter the password to create an account.
               </h4>
               <p class="small">
               </p>
@@ -293,6 +422,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script type="text/javascript" src="js/dl-main.js"></script>
 
+  <script src="vendor/iconfont/iconfont.js"></script>
 
 </body>  
 </html>
