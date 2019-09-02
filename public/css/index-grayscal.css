@@ -215,23 +215,49 @@
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 0.5rem 1.25rem;
-  font-family: 'Varela Round';
+  font-family: 'Nunito';
   font-size: 80%;
-  text-transform: uppercase;
+/*   text-transform: uppercase; */
   letter-spacing: .15rem;
   border: 0;
 }
 
+@media (min-width: 375px){
+  .btn {
+    -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 0.5rem 1.25rem;
+    font-family: 'Nunito';
+    font-size: 80%;
+  /*   text-transform: uppercase; */
+    letter-spacing: .15rem;
+    border: 0;
+  }  
+}
+@media (min-width: 992px){
+  .btn {
+    -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    padding: 0.5rem 1.25rem;
+    font-family: 'Nunito';
+    font-size: 80%;
+  /*   text-transform: uppercase; */
+    letter-spacing: .15rem;
+    border: 0;
+  } 
+}
+
 .btn-primary {
-  background-color: #172B71;
+
+  background-color:rgba(70,115,112,.5);
 }
 
 .btn-primary:hover {
-  background-color: #172B71;
+  background-color: rgba(70,115,112,.75);
 }
 
 .btn-primary:focus {
-  background-color: #172B71;
+  background-color: rgba(70,115,112,0.75);
   color: rgba(255,255,255,1);
 }
 
@@ -300,6 +326,33 @@
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
+}
+
+.binding-section {
+  padding: 1rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), color-stop(75%, rgba(225, 225, 225, 0.5)), to(#fff));
+  background: linear-gradient(to top, rgba(225, 225, 225, 0.1) 0%, rgba(225, 225, 225, 0.5) 0%, #fff 100%);  
+}
+
+.btn-binding-container {
+  padding: 0.5rem 0rem;
+}
+.btn-binding-container .btn-mm {
+  margin:0.5rem 1.0rem;
+  border: rgb(24,43,113,.85) solid 1px;
+}
+
+.mingpool-section {
+  padding: 1rem 0;
+}
+
+.btn-mm-container {
+  padding: 1.5rem 0rem;
+}
+
+.btn-mm-container .btn-mm {
+  margin:0.5rem 1.0rem;
+  border: rgb(24,43,113,.85) solid 1px;
 }
 
 .contact-section {
@@ -578,11 +631,14 @@ footer {
 
 /* */
 .chinese {
-  cursor: hand;
+  font-size: 0.2rem;
+  cursor: pointer;
+  letter-spacing: 0.15rem;
 }
 .lang-active {
   color: #182B71;
-  font-weight: 600;
+  font-size: 0.2rem;
+  font-weight: 400;
 }
 
 .section-title {
