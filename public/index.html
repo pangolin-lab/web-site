@@ -40,7 +40,7 @@
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="logo"  viewBox="0 0 10240 10240" preserveAspectRatio="xMidYMid meet">
@@ -208,6 +208,10 @@
             <a class="nav-link js-scroll-trigger i18n" data-en="About" data-cn="简介"
             href="#about">About</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger i18n" data-en="Project Progress" data-cn="项目进展"
+             href="#pp-section">Project Progress</a>
+          </li>         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle i18n" href="#" id="menu-users" role="button" data-toggle="dropdown" 
             data-en="User" data-cn="用户"
@@ -223,32 +227,28 @@
                       Personal
                     </a>
                  </li>
-                 <li class="dropdown-item">
+<!--                  <li class="dropdown-item">
                    <a href="#sdk-section" class="dropdown-item js-scroll-trigger i18n"
                     data-en="SDK User" data-cn="SDK 用户"
                    >SDK</a>
-                 </li>
+                 </li> -->
                </ul>
          
           </li>
-   <!--        <li class="nav-item">
-              <a class="nav-link js-scroll-trigger i18n" data-en="SDK User" data-cn="SDK用户"  
-               href="">SDK User</a>
-            </li>  -->         
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger i18n" data-en="Project Progress" data-cn="项目进展"
-             href="#pp-section">Project Progress</a>
-          </li>
+            <a class="nav-link js-scroll-trigger i18n" data-en="Mining Pool" data-cn="矿池"  
+             href="#MiningPool">Mining Pool</a>
+          </li>          
+
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger i18n" data-en="Help&Download" data-cn="帮助与下载"
              href="download-home.html#page-top">Help&Download</a>
           </li> 
-
           <li class="nav-item">
             <a class="nav-link sel-lang js-scroll-trigger">
-              <span class="chinese pc-cn lang-active small" data-sign="cn" data-en="中文" data-cn="Chinese">中文</span>
-              <span class="vertical">|</span>
-              <span class="chinese pc-en small" data-sign="en" data-en="English" data-cn="英文">English</span>
+              <span class="chinese lang-active" data-sign="cn" data-en="中文" data-cn="Chinese">中文</span>
+              <span class="vertical chinese">|</span>
+              <span class="chinese" data-sign="en" data-en="English" data-cn="英文">English</span>
             </a>
           </li>                    
         </ul>
@@ -571,6 +571,88 @@
     </div>
   </section>
 
+  <!-- Binding ETH Address Section -->
+  <section class="binding-section">
+    <div class="container">
+      <form>
+        <div class="row form-group align-items-center">
+          <label for="clientAddress" class="col-md-4 col-sm-4 text-md-right i18n" 
+            data-en="Pangolin Address" data-cn="Pangolin 地址"
+          >
+            Pangolin Address
+          </label>
+          <input class="form-control col-md-6 col-sm-10" id="clientAddress" name="clientAddress"
+            placeholder="please input Pangolin Address."
+          ></input>
+        </div>
+        <div class="row form-group align-items-center">
+          <label for="clientBalance" class="col-md-4 col-sm-4 text-md-right i18n"
+            data-en="Balance" data-cn="余额"
+          >
+            Balance
+          </label>
+          <input class="form-control col-md-6 col-sm-10" id="clientBalance" name="clientBalance" disabled="disabled"></input>
+        </div>
+        <div class="row justify-content-center btn-group-sm text-md-center btn-binding-container" role="contractGroup">
+          <button class="col-lg-2 col-sm-3 btn btn-primary btn-sm btn-mm i18n" id="btnQueryBalance"
+            data-en="Query Balance" data-cn="查询"
+          >
+            Query Balance
+          </button>         
+          <button class="col-lg-2 col-sm-3 btn btn-primary btn-sm btn-mm i18n" id="btnBinding"
+            data-en="Binding" data-cn="绑定"
+          >
+            Binding
+          </button>  
+          <button class="col-lg-2 col-sm-3 btn btn-primary btn-sm btn-mm i18n" id="btnUnbind"
+            data-en="Unbind" data-cn="解绑"
+          >
+            Unbind
+          </button>                   
+        </div>       
+      </form>
+    </div>
+  </section>
+
+  <!-- Mining Pool -->
+  <section class="mingpool-section" id="MiningPool">
+    <div class="container align-items-center">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="text-muted section-title i18n" data-en="About Mining Pool" data-cn="矿池简介">About Mining Pool</h3>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-8">
+          <p class="small">
+            https://www.w3schools.com › bootstrap4 › bootstrap_forms_inputs
+Supported Form Controls. Bootstrap supports the following form controls: input; textarea; checkbox; radio; select. Bootstrap Input. Bootstrap supports all the
+          </p>
+          <div class="row justify-content-center align-items-center btn-lg-group btn-mm-container">
+            <button class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnDownloadMM"
+              data-en="Get Program" data-cn="下载矿机/矿池"
+            >
+              Query Balance
+            </button>         
+            <button class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnGetManual"
+              data-en="Get User Manual" data-cn="用户操作手册"
+            >
+              Binding
+            </button>  
+            <button class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnJoinMP"
+              data-en="Join Mining Pool" data-cn="加入矿池"
+            >
+              Unbind
+            </button>             
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <img src="img/africa.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>    
+  </section>
+
   <!-- Signup Section -->
 <!--   <section id="signup" class="signup-section">
     <div class="container">
@@ -670,7 +752,7 @@
           <div class="container">
             <ul class="row justify-content-center">
               <li class="">
-                <a href="#contact" class="nav-link i18n"
+                <a href="download-home.html#videoSection" class="nav-link i18n"
                   data-en="Help" data-cn="帮助"
                 >
                   Help
@@ -725,9 +807,6 @@
   <script>
    $(document).ready(function(){
       InitializeI18n();
-
-
-
    });  
   </script>
 <script src="vendor/iconfont/iconfont.js"></script>
