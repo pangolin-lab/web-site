@@ -1,0 +1,110 @@
+/*!
+ *
+ *   ___    ___
+ *  ( _<    >_ )
+ *  //        \\
+ *  \\___..___//
+ *   `-(    )-'
+ *     _|__|_
+ *    /_|__|_\
+ *    /_|__|_\
+ *    /_\__/_\
+ *     \ || /  _)
+ *       ||   ( )
+ *       \\___//
+ *        `---'
+ * 
+ * Copyright (c) 2019 PPL,pangolin-team 
+ * E-mail : developer-team@pangolink.org
+ * https://github.com/pangolin-lab/web-site
+ */
+/* ========== Navigation ============ */
+body{
+  background: rgba(243,244,248,1);
+}
+.svg-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (min-width: 375){
+  .svg-logo {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* */
+.chinese {
+  font-size: 0.2rem;
+  cursor: pointer;
+  letter-spacing: 0.05rem;
+}
+.lang-active {
+  color: #182B71;
+  font-size: 0.2rem;
+  font-weight: 400;
+}
+
+.masthead {
+  position: relative;
+  padding: 80px 0 0 0;
+  width: 100%;
+  height: auto;
+  min-height: 25rem;
+
+/*   background: -webkit-gradient(linear, left bottom, left bottom, from(rgba(255,249,250, 0.3)), color-stop(75%, rgba(255,249,250, 0.7)), to(#b0b3b5));
+background: linear-gradient(to top, rgba(255,249,250, 0.3) 0%, rgba(255,249,250, 0.7) 75%, #b0b3b5 100%);  */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.dl-box {
+  border: #fff solid 2px;
+  padding: 1rem 0;
+  margin: 2.25rem 0;
+}
+.dl-title {
+  margin:0.75rem 0;
+  font-size:1rem;
+  font-weight: 400;
+  color: rgba(45,234,150,1);
+  font-family: Source Han Sans CN;
+}
+
+.dl-box a{
+  color: rgba(35,40,44,1);
+  font-size:1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+}
+
+.dl-box a:hover{
+  color: rgba(35,40,44,.7);
+  font-size:1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+}
+
+.dl-box a:focus{
+  color: rgba(35,40,44,.7);
+  font-size:1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+}
+
+/* minning pool section */
+.mining-pool-list-section {
+  padding: 1rem 0;
+  background: #fff;
+}
+
+.section-title {
+
+}
+
+.miningpool-form-box {
+  background:rgba(255,255,255,1)!important;
+}
