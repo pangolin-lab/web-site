@@ -90,13 +90,14 @@
   <header class="masthead">
     <div class="container">
       <div class="row bg-white dl-box">
-        <div class="col-lg-12 ">
+        <div class="col-12">
           <h5 class="dl-title">矿池下载链接</h5>
           <a href="#" class="" target="mining-pool-download">
-            https://youtu.be/pUN0WdTImNE <i class="fas fa-external-link-alt"></i>
+            https://youtu.be/pUN0WdTImNE 
+            <i class="fas fa-external-link-alt"></i>
           </a> 
         </div>
-        <div class="col-lg-12 ">
+        <div class="col-12 ">
           <h5 class="dl-title">矿机下载链接</h5>
           <a href="#" class="" target="mining-pool-download">
             https://youtu.be/pUN0WdTImNE <i class="fas fa-external-link-alt"></i>
@@ -104,13 +105,13 @@
         </div>        
       </div> 
       <div class="row bg-white dl-box">
-        <div class="col-lg-12 ">
+        <div class="col-12 ">
           <h5 class="dl-title">矿池下载链接</h5>
           <a href="#" class="" target="mining-pool-download">
             https://youtu.be/pUN0WdTImNE <i class="fas fa-external-link-alt"></i>
           </a> 
         </div>
-        <div class="col-lg-12 ">
+        <div class="col-12 ">
           <h5 class="dl-title">矿机下载链接</h5>
           <a href="#" class="" target="mining-pool-download">
             https://youtu.be/pUN0WdTImNE <i class="fas fa-external-link-alt"></i>
@@ -123,17 +124,17 @@
   <section class="mining-pool-list-section" id="miningPoolSection">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8">
-          <h2 class="section-title">
+        <div class="col-lg-8 col-sm-12" style="padding: 0;">
+          <h3 class="section-title">
             矿池
-          </h2>
-          <table class="table table-bordered badge-light">
+          </h3>
+          <table class="table table-bordered badge-light" style="padding: 0;">
             <thead>
               <tr class="w-100">
-                <th class="col-3" >主地址</th>
-                <th class="col-2" >名称</th>
-                <th class="col-2">抵押币个数</th>
-                <th class="col-5">简介</th>
+                <th class="w-25">主地址</th>
+                <th class="w-25">名称</th>
+                <th class="w-10">抵押币个数</th>
+                <th class="w-40">简介</th>
               </tr>
             </thead>
             <tbody>
@@ -142,20 +143,138 @@
           </table>
         </div>
 
-        <div class="col-lg-4">
-          <div class="miningpool-form-box">
-            <h2 class="miningpool-form-box section-title ">
+        <div class="col-lg-4 col-sm-12">
+          <div class="justify-content-center miningpool-form-box" style=" ">
+            <h4 class="miningpool-form-box section-title ">
               加入矿池
-            </h2>
-            <form action="#" class="miningpool-form-box">
-              
-            </form>            
-          </div>
+            </h4>
+            <form action="#" class="container">
+              <div class="form-group">
+                <label for="mainContractAddress"><span class="i18n">Address</span><span class="text-danger">*</span></label>
+                <input class="form-control" id="mainContractAddress" name="mainContractAddress" disabled="disabled" 
+                  value="0x4BF9Ceb301aadd4a6eF3007129CF759A0ca48800" 
+                  />
+                <small class="form-text text-muted">请点击左侧矿池列表，选择矿池。</small>
+              </div>      
 
+              <div class="form-group">
+                <label for="mainContractAddress"><span class="i18n">Sub Address</span><span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="miningMachineAddress" name="miningMachineAddress" 
+                  placeholder="please input sub address" 
+                  />
+              </div>
+  
+              <div class="form-group">
+                <label class="form-control-label" for="miningPoolToken">
+                  <span class="i18n">ERC20 Token</span><span class="text-danger">*</span>
+                </label>
+                <input type="number" class="form-control" id="miningPoolToken" name="miningPoolToken" 
+                  value="" placeholder="please input ERC20 Coin amount" 
+                  />
+              </div>
+
+              <div class="form-group">
+                <label class="form-control-label" for="mmName">
+                  <span class="i18n">Node Name</span><span class="text-danger">*</span>
+                </label>
+                <input type="text" class="form-control" id="mmName" name="mmName" maxlength="20" 
+                  value="" placeholder="please input your Mining Machine Name." 
+                  />                
+              </div>      
+
+              <div class="form-group">
+                <label class="form-control-label" for="mmDescription">
+                  <span class="i18n">Mining Machine Description</span><span class="text-danger">*</span>
+                </label>
+                <input type="textarea" class="form-control" id="mmDescription" name="mmDescription" rows="3" 
+                  value="" placeholder="please input your Mining Machine Description." 
+                  />                
+              </div>
+
+              <div class="row justify-content-center text-right">
+                <div class="col-12 pull-right pt-2">
+                  <button class="btn btm-primary btn-mm-primary i18n btnJoinNow disabled"
+                    
+                  >
+                    立即加入
+                  </button>
+                </div> 
+              </div>
+            </form> 
+
+            
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-4 col-xs-12">
+          <div class="social">
+            <div class="text-center text-lg-left">
+              <a href="https://twitter.com/pangoli06275561" target="twitter">
+                <svg class="icon icon-social">
+                  <use xlink:href="#icon-twitter-color"></use>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/Pangolin-110039653699290" target="facebook">
+                <svg class="icon icon-social">
+                  <use xlink:href="#icon-facebook2"></use>
+                </svg>
+              </a>
+              <a href="https://t.me/joinchat/JQL5exM5SxWLtI3ZmtVnVA" target="telegram">
+                <svg class="icon icon-social">
+                  <use xlink:href="#icon-telegram-color"></use>
+                </svg>
+              </a>            
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-lg-5 col-md-8 col-xs-12">
+          <div class="container">
+            <ul class="row justify-content-center">
+              <li class="li-menu">
+                <a href="download-home.html#videoSection" class="nav-link i18n"
+                  data-en="Help" data-cn="帮助"
+                >
+                  Help
+                </a>
+              </li>
+              <li class="">
+                <a href="http://pangolink.org/dl_index.html" class="nav-link i18n" target="Download DApp" 
+                  data-en="Download DApp" data-cn="下载 DApp" 
+                  data-cnurl="http://pangolink.org/dl_cn_index.html" data-enurl="http://pangolink.org/dl_index.html"
+                >
+                Download DApp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="container">
+            <div class="row justify-content-center align-items-center">
+              <svg class="icon logo-footer" aria-hidden="true">
+                <use xlink:href="#icon-pangolin"></use>
+              </svg>
+              <h3 class="logo-title d-none d-md-block">Pangolin Protocal</h3>
+            </div>
+          </div> 
+        </div>       
+      </div>       
+    </div>
+   
+  </section>
+
+  <footer class="small text-center">
+    <div class="container">
+      Copyright &copy; Pangolin 2019
+    </div>
+  </footer>  
 
   <!-- scripts important -->
   <script src="vendor/jquery/jquery.min.js"></script>

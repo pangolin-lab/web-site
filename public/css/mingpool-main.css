@@ -1,5 +1,5 @@
 /*!
- *
+ * mingpool-main
  *   ___    ___
  *  ( _<    >_ )
  *  //        \\
@@ -76,14 +76,18 @@ background: linear-gradient(to top, rgba(255,249,250, 0.3) 0%, rgba(255,249,250,
 
 .dl-box a{
   color: rgba(35,40,44,1);
-  font-size:1.5rem;
+  font-size:1.25rem;
   font-weight: 500;
   letter-spacing: 0.15rem;
+  word-wrap: break-word;
 }
 
+
+
 .dl-box a:hover{
+  cursor: pointer;
   color: rgba(35,40,44,.7);
-  font-size:1.5rem;
+  font-size:1.25rem;
   font-weight: 500;
   letter-spacing: 0.15rem;
 }
@@ -102,9 +106,254 @@ background: linear-gradient(to top, rgba(255,249,250, 0.3) 0%, rgba(255,249,250,
 }
 
 .section-title {
-
+  margin: .5rem .5rem;
+  padding: .5rem 0!important;
 }
 
 .miningpool-form-box {
-  background:rgba(255,255,255,1)!important;
+  color: #fff;
+  background-color:rgba(5,234,150,1);
+  border-radius: .35rem;
+  background-clip:rgba(5,234,150,1);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  padding-bottom: 1.75rem;
+}
+
+.miningpool-form-box .form-group {
+  margin-bottom: 0rem; 
+}
+
+.miningpool-form-box label {
+  margin-bottom: 0rem;
+}
+
+input.form-control {
+  color: #fff;
+  border: none;
+  background-color:transparent;
+  border-bottom: #fff solid 1px;
+
+}
+
+::placeholder{
+  font-size: 65%;
+  color:#fff;
+}
+
+input.form-control:disabled, input.form-control[readonly] {
+  color: #fff;
+  background-color:transparent;
+  border-bottom: #fff solid 1px;  
+}
+
+button.btn-mm-primary , a.btn-mm-primary {
+  font-size: .85rem;
+  font-weight: 300;
+  background-color: rgba(255,255,255,.95);
+  border:1px solid rgba(255,255,255,1);
+}
+
+button.btn-mm-primary:hover , a.btn-mm-primary:hover {
+  background-color: rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,1);
+  color: rgba(45,234,150,.85);
+}
+
+button.btn-mm-primary:hover , a.btn-mm-primary:hover {
+  background-color: rgba(255,255,255,.95);
+  border:1px solid rgba(255,255,255,1);
+  color: rgba(45,234,150,.85);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 1rem 0 0;
+}
+
+.icon-social {
+  width:3.55rem;
+  height:3.55rem;
+  margin-top: 0.35rem;
+  padding: 0.125rem 0; 
+}
+
+.contact-section li {
+  float: left !important;
+  list-style-type: none; 
+}
+
+.contact-section ul {
+  list-style-type:none;
+  margin: 0.25rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.contact-section li a {
+  display: block;
+  color: #242528;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0.25rem 1rem;
+  font-family:Source Han Sans CN;
+  font-weight:500;  
+  text-decoration: none;
+}
+
+/*border: #64a19d solid 0.1px;*/
+.contact-section li a:hover {
+  color: rgb(100,161,157,1);
+}
+
+.contact-section li a:focus {
+  color: rgb(100,161,157,1);
+}
+
+.contact-section li a:active {
+  color: #fade(#64a19d, 80%) !important;
+}
+
+.contact-section .logo-footer {
+    width:3.75rem;
+    height:3.75rem;
+    margin-top: 0.25rem;
+    padding: 0.125rem 0; 
+}
+
+.contact-section .logo-title {
+  font-family:EngraversGothicBT;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  background:linear-gradient(266deg,rgba(48,199,246,1) 20.21484375%, rgba(113,20,189,1) 97.65625%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+@media (min-width: 375px) {
+  .contact-section li a {
+    display: block;
+    color: #242528;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.25rem;
+    font-family:Source Han Sans CN;
+    font-weight:100;  
+    text-decoration: none;
+  }
+
+  .contact-section .logo-footer {
+      width:3rem;
+      height:3rem;
+      margin-top: 0.125rem;
+      padding: 0; 
+  }
+
+  .contact-section .icon-social {
+      width:1.75rem;
+      height:1.75rem;
+      margin-top: 0.1rem;
+      padding: 0.1rem 0; 
+  }
+  .contact-section .logo-title {
+    font-family:EngraversGothicBT;
+    font-size: 1rem;
+    font-weight:200;
+    color:rgba(255,255,255,1);
+    background:linear-gradient(266deg,rgba(48,199,246,1) 20.21484375%, rgba(113,20,189,1) 97.65625%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }  
+}
+
+@media (min-width: 768px) {
+  .contact-section li a {
+    display: block;
+    color: #242528;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0.125rem 1rem;
+    margin-top: -0.75rem;
+    font-family:Source Han Sans CN;
+    font-weight:500;  
+    text-decoration: none;
+  }
+
+  .contact-section .logo-footer {
+      width:3rem;
+      height:3rem;
+      margin-top: 0.125rem;
+      padding: 0.1rem 0; 
+  }
+
+  .contact-section .icon-social {
+      width:2.75rem;
+      height:2.75rem;
+      margin-top: 0.125rem;
+      padding: 0.1rem 0; 
+  }
+  .contact-section .logo-title {
+    font-family:EngraversGothicBT;
+    font-size: 1rem;
+    font-weight:200;
+    color:rgba(255,255,255,1);
+    background:linear-gradient(266deg,rgba(48,199,246,1) 20.21484375%, rgba(113,20,189,1) 97.65625%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }  
+}
+
+
+
+@media (min-width: 1024){
+  .contact-section li {
+    float: left !important;
+  }
+
+  .contact-section ul {
+    list-style-type:none;
+    margin: 0.25rem;
+    padding: 1rem;
+    overflow: hidden;
+  }
+
+  .contact-section li a {
+    display: block;
+    color: #242528;
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0.25rem 1rem;
+    font-family:Source Han Sans CN;
+    font-weight:500;  
+    text-decoration: none;
+  }
+
+  .contact-section .logo-footer {
+      width:3.75rem;
+      height:3.75rem;
+      margin-top: 0.25rem;
+      padding: 0.125rem 0; 
+  }
+
+  .contact-section .icon-social {
+      width:3.55rem;
+      height:3.55rem;
+      margin-top: 0.35rem;
+      padding: 0.125rem 0; 
+  }
+
+  .contact-section .logo-title {
+    font-family:EngraversGothicBT;
+    font-weight:400;
+    padding-top: 50%;
+    transform: translateY(-50%);
+    color:rgba(255,255,255,1);
+    background:linear-gradient(266deg,rgba(48,199,246,1) 20.21484375%, rgba(113,20,189,1) 97.65625%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+}
+
+.footer-bg {
+  background:linear-gradient(75deg,rgba(232,233,237,1),rgba(239,241,246,1));
+  margin: 0 3rem 1rem 3rem;
 }
