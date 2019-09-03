@@ -147,22 +147,25 @@ input.form-control:disabled, input.form-control[readonly] {
 }
 
 button.btn-mm-primary , a.btn-mm-primary {
-  font-size: .85rem;
-  font-weight: 300;
-  background-color: rgba(255,255,255,.95);
-  border:1px solid rgba(255,255,255,1);
+  font-size: .65rem;
+  padding: .15rem .75rem;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  background-color: rgba(255,255,255,1);
+  border:2px solid rgba(255,255,255,1);
 }
 
 button.btn-mm-primary:hover , a.btn-mm-primary:hover {
+  font-weight: 500;
   background-color: rgba(255,255,255,.85);
-  border:1px solid rgba(255,255,255,1);
-  color: rgba(45,234,150,.85);
+  border:2px solid rgba(255,255,255,1);
+  color: rgba(23,43,113,.95);
 }
 
-button.btn-mm-primary:hover , a.btn-mm-primary:hover {
+button.btn-mm-primary:focus , a.btn-mm-primary:focus {
   background-color: rgba(255,255,255,.95);
-  border:1px solid rgba(255,255,255,1);
-  color: rgba(45,234,150,.85);
+  border:2px solid rgba(255,255,255,1);
+  color: rgba(23,43,113,.85);
 }
 
 /* Contact Section */
@@ -353,7 +356,8 @@ button.btn-mm-primary:hover , a.btn-mm-primary:hover {
   }
 }
 
-.footer-bg {
-  background:linear-gradient(75deg,rgba(232,233,237,1),rgba(239,241,246,1));
-  margin: 0 3rem 1rem 3rem;
+.footer-section {
+  /*background:linear-gradient(75deg,rgba(232,233,237,1),rgba(239,241,246,1));*/
+  margin: 0;
+  padding: 2rem auto;
 }
