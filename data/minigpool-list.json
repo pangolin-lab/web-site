@@ -1,0 +1,51 @@
+[
+  {
+  	"id":"0x4BF9Ceb301aadd4a6eF3007129CF759A0ca48800",
+  	"nodeName":"US Seattle Fast Pool",
+  	"mortgageToken":3000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0xc0E6a6F90D4Cd02F13447565171Fea4bf91D73A8",
+  	"nodeName":"CA BC Fast Pool",
+  	"mortgageToken":5000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0xc710f1628867b1a4f5475462699a21d58bb2c792",
+  	"nodeName":"JP Tokyo Fast Pool",
+  	"mortgageToken":3500,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0xc0e6a6f90d4cd02f13447565171fea4bf91d73a8",
+  	"nodeName":"US VG Fast Pool",
+  	"mortgageToken":3000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0x6212dd88f890fefe0af24d1404d96adf488e4e3b",
+  	"nodeName":"US NJ Fast Pool",
+  	"mortgageToken":3000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0x75a3c30fb20efc2c4b043dc5f3e5e6e1b9cf914e",
+  	"nodeName":"US Seattle Fast Pool",
+  	"mortgageToken":3000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0x95412b539b87d8d53febf8b80b92601c5833f12e",
+  	"nodeName":"US Seattle Fast Pool",
+  	"mortgageToken":3000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  },
+  {
+  	"id":"0xfe8cd98acd044a94c40d7eaa739e597288d63037",
+  	"nodeName":"US Seattle Fast Pool",
+  	"mortgageToken":3000,
+  	"remark":"Minner Machine Configuration : 2CPU 2TB Memory Bandwidth/month 2048GB"
+  }
+
+]

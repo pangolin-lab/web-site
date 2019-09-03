@@ -101,7 +101,7 @@ background: linear-gradient(to top, rgba(255,249,250, 0.3) 0%, rgba(255,249,250,
 
 /* minning pool section */
 .mining-pool-list-section {
-  padding: 1rem 0;
+  padding: 0rem 0;
   background: #fff;
 }
 
@@ -117,6 +117,11 @@ background: linear-gradient(to top, rgba(255,249,250, 0.3) 0%, rgba(255,249,250,
   background-clip:rgba(5,234,150,1);
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   padding-bottom: 1.75rem;
+}
+
+.miningpool-form-box .section-title {
+  margin: .5rem .5rem;
+  padding: 1.5rem 0 3rem 0 !important;
 }
 
 .miningpool-form-box .form-group {

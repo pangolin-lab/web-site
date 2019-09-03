@@ -218,7 +218,7 @@
   font-family: 'Nunito';
   font-size: 80%;
 /*   text-transform: uppercase; */
-  letter-spacing: .15rem;
+  letter-spacing: .05rem;
   border: 0;
 }
 
@@ -230,7 +230,7 @@
     font-family: 'Nunito';
     font-size: 80%;
   /*   text-transform: uppercase; */
-    letter-spacing: .15rem;
+    letter-spacing: .05rem;
     border: 0;
   }  
 }
@@ -238,17 +238,16 @@
   .btn {
     -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-    padding: 0.5rem 1.25rem;
+    padding: 0.5rem .25rem;
     font-family: 'Nunito';
     font-size: 80%;
   /*   text-transform: uppercase; */
-    letter-spacing: .15rem;
+    letter-spacing: .05rem;
     border: 0;
   } 
 }
 
 .btn-primary {
-
   background-color:rgba(70,115,112,.5);
 }
 

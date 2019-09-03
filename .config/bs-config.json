@@ -6,11 +6,11 @@
 	"server": [
 		"./build",
 		"./public",
-		"./atta"
+		"./data"
 	],
 	"watchexps"	: [
 		"public/**.js # # reload",
-		"src/**.js # npm run browserify:js # reload",
+		"src/** # echo wow! # reload",
 		"public/**.css # # reloadcss",
 		"public/**.html # # reload"
 	],

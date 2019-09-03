@@ -9,8 +9,8 @@ let PGCTX = {
     {
       name:"ropsten",
       id:3,
-      contractAddress:""
-    }
+      contractAddress:"0x6C275F0961cFD76208163c196276A001E98F367E"
+    },
     {
       name:"rinkeby",
       id:4,
@@ -20,14 +20,33 @@ let PGCTX = {
   /**
    * id network number or string 
    */
-  getNetwork:(id)=>{
-  	let isID = (typeof id) == "number";
+  getNetwork:()=>{
   	for(var i=0,len=PGCTX.networks.length;i<len;i++){
-  	  if(id == PGCTX.networks[i].id 
-  	  	|| PGCTX.networks[i].name.toLowerCase() == id.toLowerCase())
+  	  if( PGCTX.networks[i].name.toLowerCase() == PGCTX.mode.toLowerCase())
   	  	return PGCTX.networks[i];
   	}
-
-  	return PGCTX.networks[i];
+  	return PGCTX.networks[0];
   }
 };
+
+/**
+ * Options string : contract address default main
+ * Options object {
+ *   mode:"",
+ *   contractAddress:""
+ * }
+ *
+ */
+function pagoConf(opts){
+  let ctx = {};
+  if(typeof opts == 'undefined') 
+    throw new Error('options valid error.');
+  if(typeof opts == 'string'){
+    return Object.assign(ctx,PGCTX.getNetwork(),{contractAddress:opts});
+  }else if(typeof opts == 'object' && opts.contractAddress && opts.contractAddress.length >0){
+    return Object.assign(ctx,PGCTX.getNetwork(),opts);
+  }
+  throw new Error('options valid error.');
+}
+
+module.exports=pagoConf;

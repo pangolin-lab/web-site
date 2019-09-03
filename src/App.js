@@ -15,8 +15,6 @@ var dateUtil = require('./modules/utils/dateUtil.js');
 
 var $ = require('jQuery');
 
-
-
 $(function(){
 	let d = new Date();
 	let ds = dateUtil.format(d,"yyyyMMdd hh:mm");

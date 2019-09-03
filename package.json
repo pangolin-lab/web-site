@@ -6,7 +6,8 @@
   "scripts": {
     "clean:all": "rm -rf build",
     "mkdirs": "mkdir build",
-    "browserify:js": "browserify src/App.js -dv -o build/js/index-bundle.js",
+    "browserify:js": "browserify src/mp-index.js -dv -o build/js/mp-index-bundle.js",
+    "watch":"watchify -p browserify-hmr src/mp-index.js -o build/js/mp-index-bundle.js -dv",
     "rebuild": "npm run clean:all && npm run mkdirs && npm run browserify:js",
     "serve": "lite-server -c .config/bs-config.json",
     "start": "npm run rebuild && npm run serve",
@@ -27,9 +28,11 @@
   "devDependencies": {
     "bestzip": "^2.1.4",
     "browserify": "^16.5.0",
+    "browserify-hmr": "^0.3.7",
     "browserify-shim": "^3.8.14",
     "lite-server": "^2.5.4",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "watchify": "^3.11.1"
   },
   "dependencies": {
     "jQuery": "^1.7.4"
