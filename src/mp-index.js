@@ -12,8 +12,10 @@
  */
 var InfuraSDK = require('./modules/infurasdk/index.js');
 var bigpago = require('./modules/pagoabi/index.js');
+var log = require('./modules/utils/log.js');
+var Log = log(true);
 //
 InfuraSDK();
 
 var PangolinABI = bigpago({id:"BIG"});
-console.log(JSON.stringify(PangolinABI, null, "  "));
+Log.logger(PangolinABI);
