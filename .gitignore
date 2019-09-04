@@ -66,3 +66,4 @@ dist
 .pri-*.*
 build
 tmp
+log

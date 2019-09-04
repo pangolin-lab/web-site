@@ -36,6 +36,7 @@
     "watchify": "^3.11.1"
   },
   "dependencies": {
+    "fast-date-format": "^2.2.3",
     "jQuery": "^1.7.4",
     "web3": "^1.2.1"
   }
