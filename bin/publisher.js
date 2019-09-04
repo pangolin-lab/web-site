@@ -1,5 +1,5 @@
 /**
- * MetaMask Support
+ * publisher
  *  |\_/|,,_____,~~`
  *  (.".)~~     )`~}}
  *	 \o/\ /---~\\ ~}}
@@ -16,6 +16,9 @@ var fs = require('fs');
 var shell = require('shelljs');
 var zip = require('bestzip');
 var path = require('path');
+let basedir = process.cwd();
+console.log(basedir);
+
 var log = require('./log.js');
 const Log = log(true);
 
@@ -51,7 +54,9 @@ initLogFile();
 buildProject();
 
 
-
+/**
+ *
+ */
 function mergeIEnv(json){
   let read = {};
   read.host = json.host;
@@ -66,6 +71,9 @@ function mergeIEnv(json){
   return Object.assign(json,IEnv,read);
 }
 
+/**
+ *
+ */
 function validRemoteConfig(json){
   if(!json || typeof json !== 'object') return false;
   if(!json.host){
@@ -86,6 +94,9 @@ function validRemoteConfig(json){
   return json;
 }
 
+/**
+ *
+ */
 function getPrivateKeyPath(key){
   let p = {
   	root:IEnv.SSH_HOME,
@@ -94,6 +105,9 @@ function getPrivateKeyPath(key){
   return path.format(p);
 }
 
+/**
+ *
+ */
 function initLogFile(){
   if(!IEnv.dsPrefix)IEnv.dsPrefix = dfYMD.format(new Date());
 
@@ -110,6 +124,10 @@ function initLogFile(){
   return lf;
 }
 
+/**
+ *
+ *
+ */
 function mkdirs(){
   shell.mkdir(IEnv.TMP_DEST,IEnv.LOG_DEST,IEnv.ZIP_DEST);
 }
@@ -117,5 +135,7 @@ function mkdirs(){
 function buildProject(){
   var child = shell.exec(IEnv.REBUILD).stdout;
   //console.log(child);
+  shell.rm('-rf','tmp/*');
+  shell.cp('-Rf','public/*','build/*','tmp/');
 
 }
