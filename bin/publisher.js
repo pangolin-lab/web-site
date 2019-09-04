@@ -11,13 +11,19 @@
  *
  */
 'use strict'; 
-
+const Settings = {
+  enableSCP:true,
+  enableZip:true,
+  projectName:"pangolin"
+}
+const enableSCP = true;
+const enableZip = true;
 var fs = require('fs');
 var shell = require('shelljs');
 var zip = require('bestzip');
 var path = require('path');
-let basedir = process.cwd();
-console.log(basedir);
+//let basedir = process.cwd();
+//console.log(basedir);
 
 var log = require('./log.js');
 const Log = log(true);
@@ -30,13 +36,14 @@ const dfTS = new DateFormat('YYYY-MM-DD HH:mm:ss.SSS');
 let remoteJson = require('../.config/.pri-remote.json');
 
 let IEnv = {
-  "TMP_DEST":"tmp/",
-  "ZIP_DEST":"dest/",
-  "LOG_DEST":"log/",
+  "TMP_DEST":"tmp",
+  "ZIP_DEST":"dest",
+  "LOG_DEST":"log",
+  "DEF_REMOTE_DEST":"/data/www",
   "REBUILD":"npm run rebuild"
 };
 IEnv.dsPrefix = dfYMD.format(new Date());
-IEnv.BASE_DIR = shell.pwd();
+IEnv.BASE_DIR = process.cwd();
 IEnv.SSH_HOME = process.env['HOME']||process.env['USERPROFILE'];
 IEnv.SSH_HOME = IEnv.SSH_HOME +"/.ssh/";
 
@@ -45,13 +52,15 @@ let validRemote = validRemoteConfig(remoteJson);
 if(!validRemote){
   process.exit(1);
 }
-IEnv = mergeIEnv(remoteJson);
 
-mkdirs();
-initLogFile();
 
+prepareIEnv();
 /**/
 buildProject();
+
+if(enableSCP){
+  let scpcCMD = getScpCMD();
+}
 
 
 /**
@@ -67,7 +76,7 @@ function mergeIEnv(json){
   }else{
   	read.pw = json.pw;
   }
-  read.dest = json.dest ?  json.dest : '/data/dest';
+  read.dest = json.dest ?  json.dest : IEnv.DEF_REMOTE_DEST;
   return Object.assign(json,IEnv,read);
 }
 
@@ -112,15 +121,11 @@ function initLogFile(){
   if(!IEnv.dsPrefix)IEnv.dsPrefix = dfYMD.format(new Date());
 
   let logPath = {
-  	root:IEnv.BASE_DIR + '/'+IEnv.LOG_DEST,
+  	root:IEnv.BASE_DIR + '/'+IEnv.LOG_DEST+'/',
   	name:"publish-"+IEnv.dsPrefix,
   	ext:".log"
   };
   let lf = path.format(logPath);
-  console.log(lf);
-  // let timestamp = dfTS.format(new Date());
-  // let command = 'echo -e ">>>"'+timestamp+' \n >'+lf+'';
-  // shell.exec(command);
   return lf;
 }
 
@@ -132,10 +137,77 @@ function mkdirs(){
   shell.mkdir(IEnv.TMP_DEST,IEnv.LOG_DEST,IEnv.ZIP_DEST);
 }
 
+/**
+ * 1.merge IEnv remote Host config
+ * 2.dir file 
+ */
+function prepareIEnv(){
+  IEnv = mergeIEnv(remoteJson);
+  IEnv.ZIP_FILE =IEnv.BASE_DIR + '/' + IEnv.ZIP_DEST + '/' 
+    + Settings.projectName + '-' + IEnv.dsPrefix + '.zip';
+  IEnv.PUB_DIR =IEnv.BASE_DIR + '/' + IEnv.ZIP_DEST + '/' 
+    + Settings.projectName + '-' + IEnv.dsPrefix;
+
+  shell.rm('-f',IEnv.ZIP_FILE,IEnv.PUB_DIR);
+  shell.rm('-rf','build');
+  shell.rm('-rf','tmp');
+
+  shell.mkdir(IEnv.TMP_DEST,IEnv.LOG_DEST,IEnv.ZIP_DEST);
+  Log.logger(IEnv);
+}
+
 function buildProject(){
   var child = shell.exec(IEnv.REBUILD).stdout;
-  //console.log(child);
-  shell.rm('-rf','tmp/*');
   shell.cp('-Rf','public/*','build/*','tmp/');
 
+  if(enableZip){
+    zipDest();
+  }else{
+    shell.cp('-R',IEnv.TMP_DEST,IEnv.PUB_DIR);
+  }
+
+}
+
+function zipDest(){
+  shell.cd(IEnv.TMP_DEST);
+  let opt = {
+    source:'./*',
+    destination: IEnv.ZIP_FILE
+  };
+
+  zip(opt).then(function(){
+    Log.logger('zip done.');
+  }).catch((err)=>{
+    Log.logger(err.stack);
+    process.exit(1);
+  });
+
+  shell.cd(IEnv.BASE_DIR);
+}
+
+
+
+function getScpCMD(){
+  let cmd = 'SCP';
+  if(IEnv.privateKey){
+    cmd += ' -i '+ getPrivateKeyPath(IEnv.privateKey);
+  }else{
+    cmd += ' -p"'+IEnv.pw+'"';
+  }
+
+  if(IEnv.port)cmd += ' -P'+IEnv.port;
+
+  if(enableZip){
+    cmd += ' ' + IEnv.ZIP_FILE;
+  }else{
+    cmd += ' -r';
+    cmd += ' ' + IEnv.PUB_DIR;
+  }
+
+  cmd += ' '+IEnv.user+'@'+IEnv.host+':';
+  cmd += IEnv.dest;
+
+  Log.logger(cmd);
+
+  return cmd;
 }
