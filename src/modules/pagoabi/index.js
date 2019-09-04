@@ -5,7 +5,15 @@ const Props = {
 
 var pangolinABI = require('./pangolin.json');
 var pangolinManagerABI = require('./pangolinmanager.json');
+var validator = require('../utils/validator.js');
 
+/**
+ * Contracts
+ *  id : {
+ *    abi:
+ *    address:
+ *  }
+ */
 var Pago = {
   Contracts:{
 
@@ -38,52 +46,54 @@ var Pago = {
   },
   validId:(id)=>{
   	return /^\w{3,60}$/.test(id);
+  },
+  setContractAddress:(id,address)=>{
+    if(Pago[id] && typeof address ==='string'){
+      Pago[id]['address']=address;
+    }
+  },
+  updateContract:(contract)=>{
+    if( typeof contract !='object' || 
+      !contract.id || !contract.address || 
+      !validator.validContractAddress(contract.address)
+      ){
+      return false;
+    }
+
+    let _id = contract.id;
+    if(!Pago.validId(_id))return false;
+    if(Pago.Contracts[_id]){
+      Pago.Contracts[_id]['address'] = contract.address;
+     if(validator.isArray(contract.abi))Pago.Contracts[_id]['abi']=contract.abi;
+     return true;
+    }else{
+      if(validator.isArray(contract.abi)){
+        Pago.Contracts[_id] = {
+          "address":contract.address,
+          "abi":contract.abi
+        };
+        return true;
+      }
+    }
+    return false;
   }
 };
 
-var BigPago = function(obj){
-  //console.log(JSON.stringify(obj));
+var BigPago = function(contracts){
+  //init abi 
   Pago.setContract(Props.TOKEN_SOL_ID,pangolinABI);
   Pago.setContract(Props.MANAGER_SOL_ID,pangolinManagerABI);
-  //console.log(JSON.stringify(Pago.Contracts));
+
+  if(typeof contracts =='object' && validator.isArray(contracts)){
+    for(var i=0,len=contracts.length;i<len;i++){
+      let s = Pago.updateContract(contracts[i]);
+      console.log("updateContract>>>"+s);
+    }
+  }
+
+  Pago = Object.assign({},Pago,Props);
   return Pago;
 }
-
-// BigPago.prototype.isArray = function(arg){
-//   if(!Array.isArray){
-//     Array.isArray = function(arg){
-//       return Object.prototype.toString.call(arg) ==='[object Array]';
-//     }
-//   }
-
-//   return Array.isArray(arr);
-// }
-
-// BigPago.Contracts = {};
-
-// BigPago.prototype.validId = function(id){
-//   return /^\w{3,20}$/.test(id);
-// }
-
-// BigPago.prototype.getContract = function(id){
-//   if(BigPago.Contracts[id] && BigPago.Contracts[id].abi)return BigPago.Contracts[id];
-//   if(Object.keys(BigPago.Contracts).length==0)return null;
-//   for(let [key,value] of Object.entries(BigPago.Contracts)){
-//     if(value.abi && (key==id || (value.address && value.address == id)))
-//       return value;
-//   }
-//   return null;
-// }
-
-// BigPago.prototype.setContract = function(id,abi,address){
-//   if(typeof id !=='string' || !this.isArray(abi)) return false;
-//   if(!this.validId(id))return false;
-//   let c = {};
-//   c[id]= {"abi":abi};
-//   if(typeof address === 'string' || address.length > 8)c[id]['address'] = address;
-//   this.Contracts = Object.assign(this.Contracts,c);
-// }
-
 
 
 module.exports = BigPago;

@@ -421,8 +421,8 @@
               <div class="cd-h-timeline__dates">
                 <div class="cd-h-timeline__line">
                   <ol>
-                    <li><a href="#0" data-date="24/08/2019" class="cd-h-timeline__date cd-h-timeline__date--selected">8月24</a></li>
-                    <li><a href="#0" data-date="05/09/2019" class="cd-h-timeline__date">9月5日</a></li>
+                    <li><a href="#0" data-date="24/08/2019" class="cd-h-timeline__date ">8月24</a></li>
+                    <li><a href="#0" data-date="05/09/2019" class="cd-h-timeline__date cd-h-timeline__date--selected">9月5日</a></li>
                     <li><a href="#0" data-date="15/10/2019" class="cd-h-timeline__date">10月</a></li>
                     <li><a href="#0" data-date="31/10/2019" class="cd-h-timeline__date">10月</a></li>
                     <li><a href="#0" data-date="01/11/2019" class="cd-h-timeline__date">10月</a></li>            
@@ -440,7 +440,7 @@
 
             <div class="cd-h-timeline__events">
               <ol>
-                <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component mx-2">
+                <li class="cd-h-timeline__event  text-component mx-2">
                   <div class="cd-h-timeline__event-content container">
                     <h5 class="cd-h-timeline__event-title i18n"  
                       data-cn="发布《Pangolin》代币" data-en='Released "Pangolin" tokens'
@@ -477,7 +477,7 @@
                   </div>
                 </li>
 
-                <li class="cd-h-timeline__event text-component mx-2">
+                <li class="cd-h-timeline__event  text-component mx-2">
                   <div class="cd-h-timeline__event-content container">
                     <h2 class="cd-h-timeline__event-title">Pangolin</h2>
                     <em class="cd-h-timeline__event-date i18n"
@@ -572,7 +572,7 @@
   </section>
 
   <!-- Binding ETH Address Section -->
-  <section class="binding-section">
+  <!-- <section class="binding-section">
     <div class="container">
       <form>
         <div class="row form-group align-items-center">
@@ -612,7 +612,7 @@
         </div>       
       </form>
     </div>
-  </section>
+  </section> -->
 
   <!-- Mining Pool -->
   <section class="mingpool-section" id="MiningPool">
@@ -629,12 +629,14 @@
 Supported Form Controls. Bootstrap supports the following form controls: input; textarea; checkbox; radio; select. Bootstrap Input. Bootstrap supports all the
           </p>
           <div class="row justify-content-center align-items-center btn-lg-group btn-mm-container">
-            <button class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnDownloadMM"
+            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnDownloadMM"
+              href="mining-pool-home.html#dl-software" 
               data-en="Get Program" data-cn="下载矿机/矿池"
             >
               Query Balance
-            </button>         
-            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnGetManual"
+            </a>         
+            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnGetManual" 
+              href="mining-pool-home.html#dl-handbook" 
               data-en="Get User Manual" data-cn="用户操作手册"
             >
               Binding
@@ -653,30 +655,11 @@ Supported Form Controls. Bootstrap supports the following form controls: input; 
     </div>    
   </section>
 
-  <!-- Signup Section -->
-<!--   <section id="signup" class="signup-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-          <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <!-- Contact Section bg-black footer-bg -->
   <section class="contact-section footer-bg" id="contact">
     <div class="container">
 
-<!--       <div class="row">
+      <!-- <div class="row">
 
         <div class="col-md-4 mb-3 mb-md-0">
           <div class="card py-4 h-100">
@@ -719,16 +702,6 @@ Supported Form Controls. Bootstrap supports the following form controls: input; 
         <div class="col-lg-3 col-md-4 col-xs-12">
           <div class="">
             <div class="text-center text-lg-left">
-<!--               <a href="https://twitter.com/pangoli06275561" class="mx-2" target="twitter">
-  <i class="fab fa-twitter"></i>
-</a>
-<a href="https://www.facebook.com/Pangolin-110039653699290" class="mx-2" target="facebook">
-  <i class="fab fa-facebook-f"></i>
-</a>
-<a href="https://t.me/joinchat/JQL5exM5SxWLtI3ZmtVnVA" class="mx-2" target="telegram">
-  <i class="fab fa-telegram "></i>
-</a> -->
-
             <a href="https://twitter.com/pangoli06275561" target="twitter">
               <svg class="icon icon-social">
                 <use xlink:href="#icon-twitter-color"></use>

@@ -46,6 +46,90 @@ body{
   font-weight: 400;
 }
 
+/* NAV begin */
+#mainNav {
+  min-height: 56px;
+  background-color: #fff;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #64a19d;
+  border: 1px solid #64a19d;
+}
+
+#mainNav .navbar-toggler:focus {
+  outline: none;
+}
+
+#mainNav .navbar-brand {
+  color: #161616;
+  font-weight: 700;
+  padding: .9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+  color: fade(#182B71, 80%);
+  outline: none;
+  background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    background-color: transparent;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #mainNav .navbar-brand {
+    padding: .5rem 0;
+    color: rgba(36,37,40,0.95);
+  }
+  #mainNav .nav-link {
+    -webkit-transition: none;
+    transition: none;
+    padding: 2rem 0.5rem;
+    color: rgba(116,117,123,0.85);
+  }
+  #mainNav .nav-link:hover {
+    color: rgba(116,117,123,0.85);
+  }
+  #mainNav .nav-link:active {
+    color: white;
+  }
+  #mainNav.navbar-shrink {
+    background-color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #161616;
+  }
+  #mainNav.navbar-shrink .nav-link {
+    color: #161616;
+    padding: 1.5rem 0.5rem 1.25rem;
+    border-bottom: 0.25rem solid transparent;
+  }
+  #mainNav.navbar-shrink .nav-link:hover {
+    color: rgba(24,43,113,0.85);
+  }
+  #mainNav.navbar-shrink .nav-link:active {
+    color: rgba(24,43,113,0.95);
+  }
+  #mainNav.navbar-shrink .nav-link.active {
+    color: #182B71;
+    outline: none;
+    border-bottom: 0.25rem solid #182B71;
+  }
+}
+/* NAV end */
+
 .masthead {
   position: relative;
   padding: 80px 0 0 0;
@@ -149,6 +233,22 @@ input.form-control:disabled, input.form-control[readonly] {
   color: #fff;
   background-color:transparent;
   border-bottom: #fff solid 1px;  
+}
+
+.miningpool-form-box .create-now-box {
+  position: relative;
+  top:2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* web3-operate-section */
+.web3-operate-section {
+  padding: 1rem 0;
+}
+
+.web3-operate-section div{
+/*  padding: 0rem 0;*/
 }
 
 button.btn-mm-primary , a.btn-mm-primary {

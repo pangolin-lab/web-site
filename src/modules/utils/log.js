@@ -12,12 +12,18 @@
  */
 function Log(pretty){
   return {
-  	isPretty:pretty||false,
-  	logger:(obj,title){
-  	  if(typeof title ==='string') console.log(title);
+  	isPretty:(typeof pretty !='boolean')||false,
+  	logger:(obj,title)=>{
+  	  if(title!=null && typeof title ==='string') console.log(title);
   	  if(typeof obj =='undefined')return;
-
-  	  this.isPretty ? console.log(JSON.stringify(obj,null,'  ')) : console.log(JSON.stringify(obj));
+      if(typeof obj != 'object'){
+        console.log(obj);
+      }else{
+        this.isPretty ? console.log(JSON.stringify(obj,null,'  ')) : console.log(JSON.stringify(obj)); 
+      }
+  	},
+  	log:(json)=>{
+  	  this.logger(json,null);
   	}
   }
 } 
