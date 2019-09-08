@@ -13,8 +13,8 @@
 const GlobalCnst = {
   requireSecret:false,
   network:"ropsten",
-  projectId:"b6e1952f8a214a2cba9784b907aba833",
-  secret:"23fdae0460e04c0fb528b327f2e22b08",
+  projectId:"",
+  secret:"",
   domain:"infura.io",
   networks:[
     {id:1,name:"Mainnet"},

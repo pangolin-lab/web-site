@@ -8,16 +8,16 @@
  * Copyright (c) 2019 PPL,pangolin-team
  * E-mail : developer-team@pangolink.org
  * https://github.com/pangolin-lab/web-site
- *
+ * Remote need install unzip
  */
 'use strict'; 
 const Settings = {
   enableSCP:true,
   enableZip:true,
+  unzipRemote:false,
   projectName:"pangolin"
 }
-const enableSCP = true;
-const enableZip = true;
+
 var fs = require('fs');
 var shell = require('shelljs');
 var zip = require('bestzip');
@@ -34,6 +34,11 @@ const dfYMD = new DateFormat('YYYYMMDD');
 const dfTS = new DateFormat('YYYY-MM-DD HH:mm:ss.SSS');
 
 let remoteJson = require('../.config/.pri-remote.json');
+//Need ssh git
+if(!shell.which('ssh') || !shell.which('npm') || !shell.which('git')){
+  shell.echo('Sorry,this script requires SSH and npm.');
+  shell.exit(1);
+}
 
 let IEnv = {
   "TMP_DEST":"tmp",
@@ -58,9 +63,7 @@ prepareIEnv();
 /**/
 buildProject();
 
-if(enableSCP){
-  let scpcCMD = getScpCMD();
-}
+
 
 
 /**
@@ -143,8 +146,9 @@ function mkdirs(){
  */
 function prepareIEnv(){
   IEnv = mergeIEnv(remoteJson);
+  IEnv.ZIP_FILE_NAME = Settings.projectName + '-' + IEnv.dsPrefix + '.zip';
   IEnv.ZIP_FILE =IEnv.BASE_DIR + '/' + IEnv.ZIP_DEST + '/' 
-    + Settings.projectName + '-' + IEnv.dsPrefix + '.zip';
+    + IEnv.ZIP_FILE_NAME;
   IEnv.PUB_DIR =IEnv.BASE_DIR + '/' + IEnv.ZIP_DEST + '/' 
     + Settings.projectName + '-' + IEnv.dsPrefix;
 
@@ -160,10 +164,16 @@ function buildProject(){
   var child = shell.exec(IEnv.REBUILD).stdout;
   shell.cp('-Rf','public/*','build/*','tmp/');
 
-  if(enableZip){
+  if(Settings.enableZip){
     zipDest();
   }else{
     shell.cp('-R',IEnv.TMP_DEST,IEnv.PUB_DIR);
+    if(Settings.enableSCP){
+      let scpcCMD = getScpCMD();
+      Log.logger("upload >>> folder.");
+      Log.logger(scpcCMD);
+      shell.exec(scpcCMD);
+    }
   }
 
 }
@@ -171,21 +181,54 @@ function buildProject(){
 function zipDest(){
   shell.cd(IEnv.TMP_DEST);
   let opt = {
-    source:'./*',
+    source:'*',
     destination: IEnv.ZIP_FILE
   };
 
   zip(opt).then(function(){
     Log.logger('zip done.');
+    if(Settings.enableSCP){
+      let scpcCMD = getScpCMD();
+      Log.logger("upload >>> Zip.");
+      Log.logger("begin upload remote");
+      let child = shell.exec(scpcCMD,{silent:true,async:false});
+      console.log("upload remote completed.");
+      let execCMD = getUnzipCMD(IEnv.ZIP_FILE_NAME);
+      Log.logger(execCMD);
+      if(execCMD && Settings.unzipRemote){
+        Log.logger("zip published.Remote Dest:"+IEnv.ZIP_FILE_NAME);
+        shell.exec(execCMD,{silent:true,async:false});
+        Log.logger("unzip completed.");        
+      }
+    }    
   }).catch((err)=>{
     Log.logger(err.stack);
     process.exit(1);
   });
-
+  
   shell.cd(IEnv.BASE_DIR);
 }
 
+/**
+ * privateKey only
+ */
+function getUnzipCMD(zipName){
+  if(!IEnv.wwwName || !IEnv.privateKey)return false;
 
+  let ssh_cmd = 'ssh';
+  if(IEnv.privateKey){
+    ssh_cmd += ' -i ' + getPrivateKeyPath(IEnv.privateKey);
+  }
+  if(IEnv.port)ssh_cmd += ' -p'+IEnv.port;
+  ssh_cmd += ' '+IEnv.user+'@'+IEnv.host;
+
+  let execCMD = 'unzip -o -d ' + 
+    IEnv.wwwDest + '/'+IEnv.wwwName +
+    ' '+IEnv.dest + '/'+zipName;
+  ssh_cmd += ' "' +execCMD +';"';
+
+  return ssh_cmd;
+}
 
 function getScpCMD(){
   let cmd = 'SCP';
@@ -197,7 +240,7 @@ function getScpCMD(){
 
   if(IEnv.port)cmd += ' -P'+IEnv.port;
 
-  if(enableZip){
+  if(Settings.enableZip){
     cmd += ' ' + IEnv.ZIP_FILE;
   }else{
     cmd += ' -r';
@@ -206,8 +249,5 @@ function getScpCMD(){
 
   cmd += ' '+IEnv.user+'@'+IEnv.host+':';
   cmd += IEnv.dest;
-
-  Log.logger(cmd);
-
   return cmd;
 }
