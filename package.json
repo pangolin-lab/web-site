@@ -12,6 +12,7 @@
     "rebuild": "npm run clean:all && npm run mkdirs && npm run browserify:js",
     "serve": "lite-server -c .config/bs-config.json",
     "start": "npm run rebuild && npm run serve",
+    "publish":"npm run rebuild && node bin/publisher.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserify": {

@@ -209,9 +209,16 @@
             href="#about">About</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger i18n" data-en="Announcement" data-cn="公告"  
+             href="notice_en_915.html" 
+             data-cnurl="notice_cn_915.html" data-enurl="notice_en_915.html"
+             target="announcement">Announcement</a>
+          </li>  
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger i18n" data-en="Project Progress" data-cn="项目进展"
              href="#pp-section">Project Progress</a>
           </li>         
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle i18n" href="#" id="menu-users" role="button" data-toggle="dropdown" 
             data-en="User" data-cn="用户"
@@ -235,18 +242,12 @@
                </ul>
          
           </li>
+          <!--   -->  
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger i18n" data-en="Mining Pool" data-cn="矿池"  
              href="#MiningPool">Mining Pool</a>
           </li>  
-          <!--
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger i18n" data-en="Announcement" data-cn="公告"  
-             href="notice_en_915.html" 
-             data-cnurl="notice_cn_915.html" data-enurl="notice_en_915.html"
-             target="announcement">Announcement</a>
-          </li>  
-          -->                  
+            
 
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger i18n" data-en="Help&Download" data-cn="帮助与下载"
@@ -299,20 +300,6 @@
     </div>
   </header> 
 
-  <!-- About Section 
-  <section id="about" class="about-section text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-          <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-        </div>
-      </div>
-      <img src="img/ipad.png" class="img-fluid" alt="">
-    </div>
-  </section>
-  -->
 
   <!-- Personal Section -->
   <section class="personal-section">
@@ -632,24 +619,23 @@
       </div>
       <div class="row justify-content-center align-items-center">
         <div class="col-lg-8">
-          <p class="small">
-            https://www.w3schools.com › bootstrap4 › bootstrap_forms_inputs
-Supported Form Controls. Bootstrap supports the following form controls: input; textarea; checkbox; radio; select. Bootstrap Input. Bootstrap supports all the
+          <p class="small i18n" data-en="" data-cn="">
+           
           </p>
           <div class="row justify-content-center align-items-center btn-lg-group btn-mm-container">
-            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnDownloadMM"
+            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n d-none" id="btnDownloadMM"
               href="mining-pool-home.html#dl-software" 
               data-en="Get Program" data-cn="下载矿机/矿池"
             >
               Query Balance
             </a>         
-            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnGetManual" 
+            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n d-none" id="btnGetManual" 
               href="mining-pool-home.html#dl-handbook" 
               data-en="Get User Manual" data-cn="用户操作手册"
             >
               Binding
             </a>  
-            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n" id="btnCreateMP"
+            <a class="col-lg-3 col-sm-6 btn btn-primary btn-mm i18n d-none" id="btnCreateMP"
               data-en="Creating Miner Pool" data-cn="创建矿池" href="mining-pool-home.html#miningPoolSection"
             >
               Unbind
