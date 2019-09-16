@@ -24,15 +24,18 @@
 
   <style type="text/css">
 
-@media (max-width: 375) {
-  .d-xxs-none {
-    display: none !important;
-  }
-} 
+    @media (max-width: 375) {
+      .d-xxs-none {
+        display: none !important;
+      }
+    } 
 
-.d-xxs-none {
-  display: none !important;
-}   
+    .d-xxs-none {
+      display: none !important;
+    }  
+
+
+
   </style>
 
 </head>
@@ -210,8 +213,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger i18n" data-en="Announcement" data-cn="公告"  
-             href="notice_en_915.html" 
-             data-cnurl="notice_cn_915.html" data-enurl="notice_en_915.html"
+             href="#Announcement-section" 
              target="announcement">Announcement</a>
           </li>  
           <li class="nav-item">
@@ -349,7 +351,7 @@
 
       <div class="row pt-lg-5 pt-sm-2" id="personal">
         <div class="col-12">
-          <h3 class="text-muted section-title i18n" data-en="Personal User" data-cn="个人用户">Personal User</h3>
+          <h3 class="section-title i18n" data-en="Personal User" data-cn="个人用户">Personal User</h3>
         </div>
       </div>
 
@@ -376,12 +378,34 @@
     
   </section>
 
+  <section id="Announcement-section" class="announcement-section">
+
+    <div class="container">
+      <h1 class="section-title i18n"
+        data-en="Official Announcement" data-cn="官方公告">
+        Official Announcement
+      </h1>
+      <p class="p-link">
+        #imToken# #https://github.com/consenlabs/token-profile/pull/4917 # 
+      </p>
+      <p class="i18n"
+        data-cn="我们正在完善 LIN 在 imToken 中的代币相关资料。完成后，大家可以在 imToken 里看到 logo，更方便地管理 LIN，同时能看到更多代币信息。"
+        data-en="We are refining LIN's token-related information in imToken. Once you're done, you can see the logo in imToken, which makes it easier to manage LIN and see more token information."
+      >
+        We are refining LIN's token-related information in imToken. Once you're done, you can see the logo in imToken, which makes it easier to manage LIN and see more token information.
+      </p>
+    </div>
+  </section>
+
 
   <!-- Project Progress -->
   <section class="pp-section bg-light mx-2 pt-2" id="pp-section">
     <div class="container">
+      <h1 class="section-title i18n" data-cn="项目进展" data-en="Project Progress">
+        Project Progress
+      </h1>
       <div class="row justify-content-center">
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 ">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
           <div class="container mx-1 bg-white">
             <h3>Pangolin</h3>
             <p class="i18n" 
@@ -614,7 +638,7 @@
     <div class="container align-items-center">
       <div class="row">
         <div class="col-12">
-          <h3 class="text-muted section-title i18n" data-en="About Mining Pool" data-cn="矿池简介">About Mining Pool</h3>
+          <h3 class="section-title i18n" data-en="About Mining Pool" data-cn="矿池简介">About Mining Pool</h3>
         </div>
       </div>
       <div class="row justify-content-center align-items-center">
