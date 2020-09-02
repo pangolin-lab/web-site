@@ -25,7 +25,7 @@
   "author": "pangolin-lab",
   "license": "MIT",
   "devDependencies": {
-    "bestzip": "^2.1.4",
+    "bestzip": "^2.1.7",
     "browserify": "^16.5.0",
     "browserify-shim": "^3.8.14",
     "lite-server": "^2.5.4",
